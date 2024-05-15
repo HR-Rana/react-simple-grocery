@@ -10,7 +10,7 @@ export default function Hero() {
         </div>
        <div className='flex flex-col self-center w-[60%] gap-4'>
             <h4>Fresh And Organic</h4>
-            <h1>Get Your Daily Grocery Products</h1>
+            <h1 className='font-bold space-x-2'>Get Your Daily Grocery Products</h1>
              <Button btnName={"Let's Start"} classes={"btn btn-primary w-[50%]"} />
        </div>
     </div>

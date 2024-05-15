@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="navigation-bar bg-gray-200 p-5 flex items-center sticky top-0 px-5 justify-between gap-5 w-full">
             <div className="logo">
                 <Link to={"/"} >
-                    <span className='flex items-center gap-2'><FaShoppingBasket /> <h3>Grocery</h3></span>
+                    <span className='flex items-center gap-2'><FaShoppingBasket className='text-[30px]'/> <h5 className='font-[600]'>Grocery</h5></span>
                 </Link>
             </div>
             <nav className='w-[50%] '>
@@ -28,13 +28,13 @@ export default function Navbar() {
                         <Link to={"/Contact"} >Contact</Link>
                     </li>
                     <li>
-                        <Link to={"/Contact"} className='flex items-center' ><FaShoppingCart /><sup>0</sup></Link>
+                        <Link to={"/Cart"} className='flex items-center' ><FaShoppingCart /><sup>0</sup></Link>
                     </li>
                     <li>
-                        <Link to={"/Contact"} ><MdFavorite /></Link>
+                        <Link to={"/Favourite"} ><MdFavorite /></Link>
                     </li>
                     <li>
-                        <Link to={"/Contact"} ><FaCircleUser /></Link>
+                        <Link to={"/Profile"} ><FaCircleUser /></Link>
                     </li>
                 </ul>
             </nav>

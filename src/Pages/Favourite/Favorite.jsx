@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Shop({id}) {
+export default function FavoritePage() {
   return (
     <div>
       
