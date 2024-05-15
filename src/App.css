@@ -5,6 +5,28 @@
 
 
 
-.button{
-  @apply p-2 w-full bg-[]
+h1{
+  @apply text-[42px]
+}
+
+h2{
+  @apply text-[38px]
+}
+
+h3{
+  @apply text-[32px]
+}
+h4{
+  @apply text-[28px]
+}
+h5{
+  @apply text-[24px]
+}
+h5{
+  @apply text-[20px]
+}
+
+
+button{
+  @apply p-2 bg-[green] text-white font-[700] capitalize rounded-lg px-5
 }
