@@ -48,7 +48,7 @@ const Catagories2 = Catagories;
   return (
     <div>
       <span>
-        <SecTitle SecTitle={'Catagory Section'} subTitle={""} text={""} />
+        <SecTitle SecTitle={'Shop by Catagory'} subTitle={""} text={""} />
       </span>
 
       <div className='sec-contain py-10'>
