@@ -26,7 +26,19 @@ h5{
   @apply text-[20px]
 }
 
+section{
+  @apply py-5
+}
 
 button{
   @apply p-2 bg-[green] text-white font-[700] capitalize rounded-lg px-5
+}
+
+
+
+.slick-slider  .slick-next, .slick-slider .slick-prev{
+  @apply !hidden absolute left-0 top-full
+}
+.slick-track{
+  @apply w-screen
 }

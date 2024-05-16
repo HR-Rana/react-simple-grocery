@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './Hero/Hero'
 import OfferSection from './Offer/OfferSection'
+import CatagorySection from './CatagoriesSection/CatagorySection'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
              <OfferSection />
        </section> 
        <section>
-             <OfferSection />
+             <CatagorySection />
        </section>
     </div>
   )

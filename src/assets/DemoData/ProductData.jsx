@@ -6,6 +6,14 @@ export const Catagories =[
         id:"01",
         name:"Vagitables",
         image:img1,
+    },  {
+        id:"02",
+        name:"Fruits",
+        image:img1,
+    }, {
+        id:"03",
+        name:"Fish",
+        image:img1,
     }
 ]
 
@@ -23,5 +31,20 @@ export const Products=[
         stock:"220",
         image:"https://images.unsplash.com/photo-1616910111011-888888888888?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050"
 
+    }
+]
+
+
+
+export const  data =[
+    {
+        id:"01",
+        name:"aboul"
+    }, {
+        id:"02",
+        name:"Haboul"
+    },{
+        id:"03",
+        name:"Naboul"
     }
 ]
