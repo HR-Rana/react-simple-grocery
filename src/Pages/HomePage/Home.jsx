@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div>
         <Hero/>
-       
+       <section>
+             <OfferSection />
+       </section> 
        <section>
              <OfferSection />
        </section>

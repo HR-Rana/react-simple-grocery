@@ -1,4 +1,13 @@
+import img1 from '../Images/banner-1.jpg'
 
+
+export const Catagories =[
+    {
+        id:"01",
+        name:"Vagitables",
+        image:img1,
+    }
+]
 
 export const Products=[
     {
