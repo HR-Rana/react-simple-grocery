@@ -1,4 +1,8 @@
-import img1 from '../Images/banner-1.jpg'
+import img1 from '../Images/product-9.png'
+import img2 from '../Images/category-2.png'
+import img3 from '../Images/deal-img2.png'
+import img4 from '../Images/product-4.png'
+
 
 
 export const Catagories =[
@@ -6,14 +10,20 @@ export const Catagories =[
         id:"01",
         name:"Vagitables",
         image:img1,
-    },  {
+    },  
+    {
         id:"02",
         name:"Fruits",
-        image:img1,
-    }, {
+        image:img2,
+    }, 
+    {
         id:"03",
-        name:"Fish",
-        image:img1,
+        name:"Meat",
+        image:img3,
+    }, {
+        id:"04",
+        name:"Soft Drinks",
+        image:img4,
     }
 ]
 

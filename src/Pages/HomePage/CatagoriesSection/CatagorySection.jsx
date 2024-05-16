@@ -9,13 +9,41 @@ import CatagoriesCard from './CatagoriesCard';
 export default function CatagorySection() {
     var settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
+// Catagories Demo Data //
+const Catagories2 = Catagories;
 
-      const Catagories3 = Catagories;
 
   return (
     <div>
@@ -26,7 +54,7 @@ export default function CatagorySection() {
       <div className='sec-contain py-10'>
         <Slider {...settings} className='p-0 flex justify-between '>
            {
-            Catagories3.map((catagory, index) => {
+            Catagories2.map((catagory, index) => {
               return (
                 <div key={index} className='!w-[90%] p-0'>
                     <CatagoriesCard name={catagory.name} img={catagory.image}  />
