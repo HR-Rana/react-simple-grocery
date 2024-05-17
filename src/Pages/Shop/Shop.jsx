@@ -11,7 +11,7 @@ export default function Shop({id}) {
         <span className='text-center'>
           <SecTitle SecTitle={"Shop Now"} classes={'mt-5'} />
         </span>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-3'>
+      <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
         {
           AllProducts.map((items, index)=>{
             const {name, rating, price, off, lavel, image,sold }= items;
