@@ -5,13 +5,14 @@ import ProfilePage from '../Pages/Profile/Profile'
 import Cart from '../Pages/Cart/Cart'
 import FavoritePage from '../Pages/Favourite/Favorite'
 import Shop from '../Pages/Shop/Shop'
+import ProductView from '../Pages/Shop/SingleProduct/ProductView'
 
 export default function Routing() {
   return (
     <Routes>
         <Route path='/' element={<Home />} /> 
         <Route path='/Shop' element={<Shop />} /> 
-        <Route path='/Single-Product' element={<Shop />} /> 
+        <Route path='/Product/:Id' element={<ProductView />} /> 
         <Route path='/Cart' element={<Cart />} />
         <Route path='/Favorite' element={<FavoritePage />} />
         <Route path='/Profile' element={<ProfilePage />} />
