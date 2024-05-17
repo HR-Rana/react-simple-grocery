@@ -3,7 +3,7 @@
 import img1 from '../Images/product-9.png'
 import img2 from '../Images/category-2.png'
 import img3 from '../Images/deal-img2.png'
-import img4 from '../Images/Drinks/drink2.png'
+import img4 from '../Images/Drinks/Drink2.png'
 
 
 export const Catagories =[
@@ -46,12 +46,11 @@ import fruite5 from '../Images/Fruites/product-5.png';
 
 
 // soft drinks images
-import drink1 from '../Images/Fruites/product-5.png';
-import drink2 from '../Images/Fruites/product-4.png';
-import drink3 from '../Images/Fruites/product-3.png';
-import drink4 from '../Images/Fruites/product-4.png';
-import drink5 from '../Images/Fruites/product-5.png';
-
+import drink1 from '../Images/Drinks/Drink1.jpg'
+import drink2 from '../Images/Drinks/Drink2.png'
+import drink3 from '../Images/Drinks/Drink3.jpg'
+import drink4 from '../Images/Drinks/Drink4.jpg'
+import drink5 from '../Images/Drinks/drink5.jpg'
 
 
 // vegetables
@@ -60,6 +59,7 @@ import vg2 from '../Images/Vagitables/vg2.jpg';
 import vg3 from '../Images/Vagitables/vg3.jpg';
 import vg4 from '../Images/Vagitables/vg4.jpg';
 import vg5 from '../Images/Vagitables/vg5.jpg';
+import vg6 from '../Images/Vagitables/vg7.jpg';
 
 export const AllProducts=[
     {
@@ -73,12 +73,12 @@ export const AllProducts=[
         sold:"620",
         rating:"5",
         stock:"220",
-        image:vg1.jpg,
+        image:vg6,
 
     }, 
     {
         id:"02",
-        name:"",
+        name:"vegetables",
         description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga doloremque consectetur fugiat rerum cumque sed soluta corporis, accusantium adipisci nobis nisi facilis, id in voluptas exercitationem hic sint reprehenderit unde consequuntur culpa nostrum veniam autem magnam? Debitis, mollitia porro? Quas totam quaerat amet eum assumenda eos! Quasi quos eveniet animi aspernatur adipisci error quia ex autem perferendis vero consequuntur culpa ut sequi, quam repudiandae nihil, hic fugiat sit fuga accusamus perspiciatis reiciendis distinctio corporis? Fugiat ut sunt perspiciatis ratione sit laboriosam quod labore debitis dignissimos aliquid, iure cupiditate, a delectus consequuntur voluptatum distinctio dolor molestiae? Veniam similique dolores eum quod?",
         catagory:"Vagitables",
         price:"250",
@@ -87,7 +87,7 @@ export const AllProducts=[
         sold:"620",
         rating:"5",
         stock:"220",
-        image:vg2.jpg,
+        image:vg2,
 
     },
 
@@ -204,7 +204,7 @@ export const AllProducts=[
 
     },{
         id:"11",
-        name:"Grape",
+        name:"Apple flavor",
         description:"",
         catagory:"SoftDrinks",
         price:"100",
@@ -245,7 +245,7 @@ export const AllProducts=[
     },  
     {
         id:"14",
-        name:"",
+        name:"Fish3",
         description:"",
         catagory:"Fishes",
         price:"250",
@@ -273,7 +273,7 @@ export const AllProducts=[
     }, 
     {
         id:"16",
-        name:"",
+        name:"Fish4",
         description:"",
         catagory:"Fishes",
         price:"250",
@@ -286,8 +286,22 @@ export const AllProducts=[
 
     }, 
     {
+        id:"16",
+        name:"Vegetables",
+        description:"",
+        catagory:"Fishes",
+        price:"250",
+        off:"30%",
+        lavel:"Popular",
+        sold:"620",
+        rating:"5",
+        stock:"42",
+        image:vg4,
+
+    }, 
+    {
         id:"17",
-        name:"",
+        name:"Fish5",
         description:"",
         catagory:"Fishes",
         price:"250",
@@ -311,6 +325,20 @@ export const AllProducts=[
         rating:"5",
         stock:"320",
         image:drink3,
+
+    }, 
+    {
+        id:"19",
+        name:"chills",
+        description:"",
+        catagory:"Fishes",
+        price:"250",
+        off:"30%",
+        lavel:"Popular",
+        sold:"620",
+        rating:"5",
+        stock:"42",
+        image:vg1,
 
     }, 
 ]
