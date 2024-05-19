@@ -7,8 +7,12 @@ import { FaShareAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 
-export const DiscountFunc = () =>{
-  
+export const DiscountFunc = (a,b) =>{
+    let AmountPrice = parseInt(a);
+    let Discount = parseInt(b);
+    let DiscountPrice = (AmountPrice * Discount) /100
+    let Result = AmountPrice - DiscountPrice; 
+    return Result;
 }
 
 export default function ProductCard({img,classes,off, stock, lavel, Name,sold, rating, id, Price }) {
@@ -18,6 +22,9 @@ export default function ProductCard({img,classes,off, stock, lavel, Name,sold, r
 
 const discountAmount = (priceAmount * discount) / 100;
 const finalPrice = priceAmount-discountAmount
+
+
+
 
 
 
@@ -70,7 +77,8 @@ if(1 < parseInt(stock)){
             }
             {/* <span className='text-red-500 font-semibold'>      {Price}</span> */}
             {
-              off? <span className='text-red-500 ml-3'> {finalPrice}</span> : null
+              // discount price
+              off? <span className='text-red-500 ml-3'> {DiscountFunc(Price, off)}</span> : null
             }
             Tk</p>
           </span>
