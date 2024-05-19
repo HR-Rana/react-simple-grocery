@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { FaShoppingBasket } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
@@ -13,29 +13,29 @@ export default function Navbar() {
         
         <div className="navigation-bar bg-gray-200 p-5 flex items-center sticky top-0 px-5 justify-between gap-5 w-full">
             <div className="logo">
-                <Link to={"/"} >
+                <NavLink to={"/"} >
                     <span className='flex items-center gap-2'><FaShoppingBasket className='text-[30px]'/> <h5 className='font-[600]'>Grocery</h5></span>
-                </Link>
+                </NavLink>
             </div>
             <nav className='w-[50%] '>
                 <ul className='flex justify-between'>
                     <li>
-                        <Link to={"/"} >Home</Link>
+                        <NavLink to={"/"} >Home</NavLink>
                     </li>
                     <li>
-                        <Link to={"/Shop"} >Shop</Link>
+                        <NavLink to={"/Shop"} >Shop</NavLink>
                     </li>
                     <li>
-                        <Link to={"/Contact"} >Contact</Link>
+                        <NavLink to={"/Contact"} >Contact</NavLink>
                     </li>
                     <li>
-                        <Link to={"/Cart"} className='flex items-center' ><FaShoppingCart /><sup>0</sup></Link>
+                        <NavLink to={"/Cart"} className='flex items-center' ><FaShoppingCart /><sup>0</sup></NavLink>
                     </li>
                     <li>
-                        <Link to={"/Favourite"} ><MdFavorite /></Link>
+                        <NavLink to={"/Favourite"} ><MdFavorite /></NavLink>
                     </li>
                     <li>
-                        <Link to={"/Profile"} ><FaCircleUser /></Link>
+                        <NavLink to={"/Profile"} ><FaCircleUser /></NavLink>
                     </li>
                 </ul>
             </nav>

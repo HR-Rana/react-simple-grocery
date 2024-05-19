@@ -5,25 +5,12 @@ import { FaHeart } from "react-icons/fa6";
 import { IoEye } from "react-icons/io5";
 import { FaShareAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { DiscountFunc } from '../../Functions/Functions';
 
 
-export const DiscountFunc = (a,b) =>{
-    let AmountPrice = parseInt(a);
-    let Discount = parseInt(b);
-    let DiscountPrice = (AmountPrice * Discount) /100
-    let Result = AmountPrice - DiscountPrice; 
-    return Math.round(Result);
-}
+
 
 export default function ProductCard({img,classes,off, stock, lavel, Name,sold, rating, id, Price }) {
-
-  const priceAmount = parseInt(Price);
-  const discount = parseInt(off);
-
-const discountAmount = (priceAmount * discount) / 100;
-const finalPrice = priceAmount-discountAmount
-
-
 
 
 
@@ -43,14 +30,14 @@ if(1 < parseInt(stock)){
     <div className={`card ${classes}`}>
         <div className="card-header relative h-full">
             <img src={img} alt="image" className='object-contain flex-shrink-0 w-full h-[150px] md:h-[200px]' />
-            {
-                lavel && off ? <div className='lavel absolute top-1 left-0 bg-slate-400 rounded px-1' style={{backgroundColor:""}}>
+           
+              <div className='lavel absolute top-1 left-0 bg-slate-400 rounded px-1' style={{backgroundColor:""}}>
                {
                 off?  <p className='text-[10px] py-[1px] sm:text-[14px] px-1 space-x-1 sm:py-[2px] text-orange-900 font-semibold'>-{off}</p> :  <p className='text-[10px] py-[1px] sm:text-[14px] px-1 sm:py-[2px] text-white font-semibold'>{lavel}</p>
                }
-              </div> : null
+              </div>
 
-            }
+            
            <div className='favorit-view absolute top-0 right-0 flex flex-col gap-3'>
               <span title={"Favorite"}>
                 <FaHeart />
@@ -75,7 +62,7 @@ if(1 < parseInt(stock)){
             {
               off? <del><span className='text-red-500'>{Price}</span></del> : <span className='text-red-500'>{Price}</span>
             }
-            {/* <span className='text-red-500 font-semibold'>      {Price}</span> */}
+           
             {
               // discount price
               off? <span className='text-red-500 ml-3'> {DiscountFunc(Price, off)}</span> : null
