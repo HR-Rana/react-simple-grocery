@@ -14,10 +14,10 @@ export default function Shop({id}) {
       <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
         {
           AllProducts.map((items, index)=>{
-            const {name,id, rating, price, off, lavel, image,sold }= items;
+            const {name,id, rating, price, off, stock, lavel, image,sold }= items;
             return(
               <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
-                 <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
+                 <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
               </div>
             )
           })

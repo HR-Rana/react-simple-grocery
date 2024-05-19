@@ -6,21 +6,27 @@ import { IoEye } from "react-icons/io5";
 import { FaShareAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-export default function ProductCard({img,classes,off, lavel, Name,sold, rating, id, Price }) {
 
-
-const DiscountPrice =(a, b)=>{
-  let price = a + b;
-  var result = b / parseInt(price)* 100;
-  return result;
+export const DiscountFunc = () =>{
+  
 }
 
-let stock;
+export default function ProductCard({img,classes,off, stock, lavel, Name,sold, rating, id, Price }) {
 
-if(1 > parseInt(sold)){
-  console.log(sold)
+  const priceAmount = parseInt(Price);
+  const discount = parseInt(off);
+
+const discountAmount = (priceAmount * discount) / 100;
+const finalPrice = priceAmount-discountAmount
+
+
+
+// Stock out functionality
+let stocks;
+if(1 < parseInt(stock)){
+  stocks = true;
 }else{
-  stock = false
+  stocks = false
 }
 
 
@@ -59,12 +65,12 @@ if(1 > parseInt(sold)){
           
           <span className='flex'>
             <p className='font-semibold flex justify-between'>Price: 
-            {/* {
-              !off? <del><span className='text-red-500'>{Price}</span></del> : <span className='text-red-500'>{Price}</span>
-            } */}
-            <span className='text-red-500 font-semibold'>      {Price}</span>
             {
-              off? <span className='text-red-500 ml-3'> {DiscountPrice(lavel, Price)}</span> : null
+              off? <del><span className='text-red-500'>{Price}</span></del> : <span className='text-red-500'>{Price}</span>
+            }
+            {/* <span className='text-red-500 font-semibold'>      {Price}</span> */}
+            {
+              off? <span className='text-red-500 ml-3'> {finalPrice}</span> : null
             }
             Tk</p>
           </span>
@@ -75,7 +81,7 @@ if(1 > parseInt(sold)){
           <Button btnName={"Add to Cart"} classes={" bg-red-800  uppercase shadow-xl  w-[100%] text-[12px] p-0 py-2"}/>
 
           <Button btnName={"Buy Now"} classes={"bg-green-700 shadow-xl uppercase w-[100%] text-[12px] p-0 py-2"} />
-        </div> : <button className='w-full bg-slate-200' disabled>Stock out</button>
+        </div> : <button className='w-full bg-slate-200 p-0 py-2' disabled>Stock out</button>
 
         }
     </div>
