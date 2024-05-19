@@ -8,11 +8,21 @@ import { Link } from 'react-router-dom';
 
 export default function ProductCard({img,classes,off, lavel, Name,sold, rating, id, Price }) {
 
-let val1 = Price;
-let val2 = lavel;
 
-let discount = (val1 + val2) / (lavel) * 100
-console.log(discount)
+const DiscountPrice =(a, b)=>{
+  let price = a + b;
+  var result = b / parseInt(price)* 100;
+  return result;
+}
+
+let stock;
+
+if(1 > parseInt(sold)){
+  console.log(sold)
+}else{
+  stock = false
+}
+
 
 
 
@@ -53,18 +63,21 @@ console.log(discount)
               !off? <del><span className='text-red-500'>{Price}</span></del> : <span className='text-red-500'>{Price}</span>
             } */}
             <span className='text-red-500 font-semibold'>      {Price}</span>
-            {/* {
-              off? <span className='text-red-500 ml-3'> {discount}</span> : null
-            } */}
+            {
+              off? <span className='text-red-500 ml-3'> {DiscountPrice(lavel, Price)}</span> : null
+            }
             Tk</p>
           </span>
 
         </div>
-        <div className="card-footer flex flex-col sm:flex-row justify-between uppercase gap-2">
-          <Button btnName={"Add to Cart"} classes={" bg-red-800  uppercase shadow-xl  w-[100%] text-[13px] p-0 py-2"}/>
+        {
+          stock ? <div className="card-footer flex flex-col sm:flex-row justify-between uppercase gap-2">
+          <Button btnName={"Add to Cart"} classes={" bg-red-800  uppercase shadow-xl  w-[100%] text-[12px] p-0 py-2"}/>
 
-          <Button btnName={"Buy Now"} classes={"bg-green-700 shadow-xl uppercase w-[100%] text-[13px] p-0 py-2"} />
-        </div>
+          <Button btnName={"Buy Now"} classes={"bg-green-700 shadow-xl uppercase w-[100%] text-[12px] p-0 py-2"} />
+        </div> : <button className='w-full bg-slate-200' disabled>Stock out</button>
+
+        }
     </div>
   )
 }

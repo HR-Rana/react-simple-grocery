@@ -253,7 +253,7 @@ export const AllProducts=[
         lavel:"Popular",
         sold:"620",
         rating:"5",
-        stock:'0',
+        stock:0,
         image:fish3,
 
     }, 
