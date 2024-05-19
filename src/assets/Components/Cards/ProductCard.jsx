@@ -60,7 +60,7 @@ if(1 < parseInt(stock)){
           <span className='flex'>
             <p className='font-semibold flex justify-between'>Price: 
             {
-              off? <del><span className='text-red-500'>{Price}</span></del> : <span className='text-red-500'>{Price}</span>
+              off? <del><span className='text-red-500 pb-[5px] opacity-60 '> {Price}</span></del> : <span className='text-red-500'>{Price}</span>
             }
            
             {

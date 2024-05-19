@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function SecTitle({classes, text, SecTitle, subTitle}) {
  
+
+
   return (
     <div className={`section-title ${classes}`}>
       <span className=''>
