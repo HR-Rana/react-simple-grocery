@@ -12,7 +12,7 @@ export const DiscountFunc = (a,b) =>{
     let Discount = parseInt(b);
     let DiscountPrice = (AmountPrice * Discount) /100
     let Result = AmountPrice - DiscountPrice; 
-    return Result;
+    return Math.round(Result);
 }
 
 export default function ProductCard({img,classes,off, stock, lavel, Name,sold, rating, id, Price }) {
