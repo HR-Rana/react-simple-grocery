@@ -1,33 +1,33 @@
 // catagpry images
 
-import img1 from '../Images/product-9.png'
-import img2 from '../Images/category-2.png'
-import img3 from '../Images/deal-img2.png'
-import img4 from '../Images/Drinks/Drink2.png'
+import Catagory1 from '../Images/product-9.png'
+import Catagory2 from '../Images/category-2.png'
+import Catagory3 from '../Images/deal-img2.png'
+import Catagory4 from '../Images/Drinks/Drink2.png'
 
 
 export const Catagories =[
     {
         id:"01",
         name:"Vegetables",
-        image:img1,
+        image:Catagory1,
         catagory:"Vegetables"
     },  
     {
         id:"02",
         name:"Fruits",
-        image:img2,
+        image:Catagory2,
         catagory:"Fruits"
     }, 
     {
         id:"03",
         name:"Fish",
-        image:img3,
+        image:Catagory3,
         catagory:"Fish"
     }, {
         id:"04",
         name:"Soft Drinks",
-        image:img4,
+        image:Catagory4,
         catagory:"Drinks"
     }
 ]
@@ -55,6 +55,7 @@ import drink2 from '../Images/Drinks/Drink2.png'
 import drink3 from '../Images/Drinks/Drink3.jpg'
 import drink4 from '../Images/Drinks/Drink4.jpg'
 import drink5 from '../Images/Drinks/drink5.jpg'
+// sub images
 
 
 // vegetables
@@ -65,7 +66,9 @@ import vg4 from '../Images/Vagitables/vg4.jpg';
 import vg5 from '../Images/Vagitables/vg5.jpg';
 import vg6 from '../Images/Vagitables/vg7.jpg';
 // sub images
-import vg4 from '../Images/Vagitables/vg4.jpg';
+import Tomato6 from '../Images/Vagitables/tomato (1).jpg';
+import Tomato2 from '../Images/Vagitables/tomato (2).jpg';
+import Tomato3 from '../Images/Vagitables/tomato (3).jpg';
 
 
 export const AllProducts=[
@@ -82,12 +85,11 @@ export const AllProducts=[
         stock:"220",
         image:vg6,
         subImg:[
-               img1=img1, 
-               img2=img2,
-               img3=img3,
-               img4=img4,            
+              { img1:vg6}, 
+              { img2:Tomato6},
+              { img3:Tomato2},
+              { img4:Tomato3},
         ]
-
     }, 
     {
         id:"02",
@@ -101,6 +103,11 @@ export const AllProducts=[
         rating:"5",
         stock:"220",
         image:vg2,
+        subImg:[
+              { img1:vg2}, 
+              { img2:Tomato2},
+              { img4:Tomato6},
+        ]
 
     },
 
@@ -117,6 +124,13 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fish1,
+        subImg:[
+              { img1:fish1}, 
+              { img2:fish2},
+              { img3:fish3},
+        ]
+        
+       
 
     },  
     {
@@ -131,6 +145,12 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fish2,
+        subImg:[
+              { img1:fish2}, 
+              { img2:fish1},
+              { img3:fish3},
+        ]
+       
 
     }, 
     {
@@ -145,7 +165,13 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fruite2,
-
+        subImg:[
+            { img1:fruite2}, 
+            { img2:fruite1},
+            { img3:fruite3},
+            { img4:fruite4},
+      
+        ]
     },
     {
         id:"06",
@@ -159,6 +185,13 @@ export const AllProducts=[
         rating:"5",
         stock:"0",
         image:fruite3,
+        subImg:[
+            { img1:fruite3}, 
+            { img2:fruite1},
+            { img3:fruite2},
+            { img4:fruite4},
+        ]
+       
 
     },
     {
@@ -173,7 +206,11 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fruite4,
-
+        subImg:[
+            { img1:fruite4}, 
+            { img2:fruite1},
+            { img3:fruite2},
+        ]
     },
     {
         id:"08",
@@ -187,6 +224,12 @@ export const AllProducts=[
         rating:"5",
         stock:"429",
         image:drink4,
+        subImg:[
+            { img1:drink4}, 
+            { img3:drink2},
+            { img4:drink3},
+        ]
+       
 
     },  {
         id:"09",
@@ -200,7 +243,12 @@ export const AllProducts=[
         rating:"5",
         stock:"429",
         image:vg3,
-
+        subImg:[
+            { img1:vg3}, 
+            { img2:vg1},
+            { img3:vg2},
+        ]
+       
     }, 
     {
         id:"10",
@@ -214,6 +262,12 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fruite5,
+        subImg:[
+            { img1:fruite5}, 
+            { img2:fruite1},
+            { img3:fruite2},
+            { img4:fruite4},
+        ]
 
     },{
         id:"11",
@@ -227,6 +281,11 @@ export const AllProducts=[
         rating:"5",
         stock:0,
         image:drink1,
+        subImg:[
+            { img1:drink1}, 
+            { img3:drink3},
+            { img4:drink4},
+        ]
 
     },
     {
@@ -241,6 +300,12 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fruite1,
+        subImg:[
+            { img1:fruite1}, 
+            { img2:fruite2},
+            { img3:fruite3},
+            { img4:fruite4},
+        ]
 
     },  {
         id:"13",
@@ -254,6 +319,12 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:vg5,
+        subImg:[
+            { img1:vg5}, 
+            { img2:vg1},
+            { img3:vg2},
+           
+        ]
 
     },  
     {
@@ -268,7 +339,11 @@ export const AllProducts=[
         rating:"5",
         stock:0,
         image:fish3,
-
+        subImg:[
+            { img1:fish3}, 
+            { img2:fish1},
+            { img3:fish2},
+        ]
     }, 
     {
         id:"15",
@@ -282,7 +357,11 @@ export const AllProducts=[
         rating:"5",
         stock:"320",
         image:drink2,
-
+        subImg:[
+            { img1:drink2}, 
+            { img3:drink3},
+            { img4:drink4},
+        ]
     }, 
     {
         id:"16",
@@ -297,6 +376,7 @@ export const AllProducts=[
         stock:"0",
         image:fish4,
 
+       
     }, 
     {
         id:"16",
@@ -310,7 +390,11 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:vg4,
-
+        subImg:[
+            { img1:vg4}, 
+            { img2:vg1},
+        ]
+       
     }, 
     {
         id:"17",
@@ -324,7 +408,11 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:fish5,
-
+        subImg:[
+            { img1:fish5}, 
+            { img3:fish2},
+            { img4:fish3},
+        ]
     }, 
     {
         id:"18",
@@ -338,7 +426,13 @@ export const AllProducts=[
         rating:"5",
         stock:"320",
         image:drink3,
-
+        subImg:[
+            { img1:drink3}, 
+            { img2:drink1},
+            { img3:drink2},
+            { img4:drink4},
+        ]
+       
     }, 
     {
         id:"19",
@@ -352,7 +446,11 @@ export const AllProducts=[
         rating:"5",
         stock:"42",
         image:vg1,
-
+        subImg:[
+            { img1:vg1}, 
+            { img4:vg4},
+        ]
+      
     }, 
 ]
 
