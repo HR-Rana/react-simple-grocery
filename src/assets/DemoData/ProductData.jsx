@@ -9,22 +9,26 @@ import img4 from '../Images/Drinks/Drink2.png'
 export const Catagories =[
     {
         id:"01",
-        name:"Vagitables",
+        name:"Vegetables",
         image:img1,
+        catagory:"Vegetables"
     },  
     {
         id:"02",
         name:"Fruits",
         image:img2,
+        catagory:"Fruits"
     }, 
     {
         id:"03",
-        name:"Meat",
+        name:"Fish",
         image:img3,
+        catagory:"Fish"
     }, {
         id:"04",
         name:"Soft Drinks",
         image:img4,
+        catagory:"Drinks"
     }
 ]
 
@@ -60,6 +64,9 @@ import vg3 from '../Images/Vagitables/vg3.jpg';
 import vg4 from '../Images/Vagitables/vg4.jpg';
 import vg5 from '../Images/Vagitables/vg5.jpg';
 import vg6 from '../Images/Vagitables/vg7.jpg';
+// sub images
+import vg4 from '../Images/Vagitables/vg4.jpg';
+
 
 export const AllProducts=[
     {
@@ -74,6 +81,12 @@ export const AllProducts=[
         rating:"5",
         stock:"220",
         image:vg6,
+        subImg:[
+               img1=img1, 
+               img2=img2,
+               img3=img3,
+               img4=img4,            
+        ]
 
     }, 
     {

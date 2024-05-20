@@ -4,15 +4,19 @@ import Button from '../Button/Button';
 import { FaHeart } from "react-icons/fa6";
 import { IoEye } from "react-icons/io5";
 import { FaShareAlt } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { DiscountFunc } from '../../Functions/Functions';
 
 
 
 
 export default function ProductCard({img,classes,off, stock, lavel, Name,sold, rating, id, Price }) {
+  const navigate = useNavigate();
 
 
+  const SingleView = (id) =>{
+    navigate(`/${id}`)
+  }
 
 
 // Stock out functionality
@@ -46,8 +50,8 @@ if(1 < parseInt(stock)){
                 <FaShareAlt />
               </span>
               <span title='View Product'>
-                <Link to={`/Product/${id}`}>
-                  <IoEye />
+                <Link to={`/Product/${id}`} className='w-full h-full'>
+                 <IoEye />
                 </Link>
               </span>
            </div>

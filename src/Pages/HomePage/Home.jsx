@@ -15,7 +15,7 @@ export default function Home() {
        <section>
              <CatagorySection />
        </section>
-       <section>
+       <section className='Fruites'>
           <span>
             <div className=''>
                 <SecTitle SecTitle={"Fruites Items"} />
@@ -27,7 +27,7 @@ export default function Home() {
        </section> 
        <section>
           <span>
-            <div className=''>
+            <div className='' id='Fish'>
                 <SecTitle SecTitle={"Fish Items"} />
             </div>
             <span>
@@ -35,7 +35,7 @@ export default function Home() {
             </span>
           </span>
        </section> 
-       <section>
+       <section id='Drinks'>
           <span>
             <div className=''>
                 <SecTitle SecTitle={"Soft Drinks Items"} />
@@ -45,7 +45,7 @@ export default function Home() {
             </span>
           </span>
        </section> 
-       <section>
+       <section id='Vegetables'>
           <span>
             <div className=''>
                 <SecTitle SecTitle={"Vegetable Items"} />

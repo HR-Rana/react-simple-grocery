@@ -2,7 +2,8 @@ import React from 'react'
 import Button from '../../../assets/Components/Button/Button'
 import { Link } from 'react-router-dom'
 
-export default function CatagoriesCard({img, offer, name}) {
+export default function CatagoriesCard({img, offer, name, link}) {
+  console.log(link)
   return (
     <div className='shop-by-catagories w-full p-3 shadow-inner'>
         <div className='catagories'>
@@ -14,7 +15,7 @@ export default function CatagoriesCard({img, offer, name}) {
               <img src={img} alt={name}  className=''/>
             </div>
             <div className="card-footer">
-             <Link to={"/#Shop"} >
+             <Link to={`${link}`} >
               <Button btnName={"Shop Now"} classes={"w-full"} />
              </Link>
             </div>

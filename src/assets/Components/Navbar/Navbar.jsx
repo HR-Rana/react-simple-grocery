@@ -29,10 +29,13 @@ export default function Navbar() {
                         <NavLink to={"/Contact"} >Contact</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Cart"} className='flex items-center' ><FaShoppingCart /><sup>0</sup></NavLink>
+                        <NavLink to={"/Cart"} className='flex items-center' ><FaShoppingCart /><sup className='bg-slate-300 font-[700] rounded-full p-2'>0</sup></NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Favourite"} ><MdFavorite /></NavLink>
+                        <NavLink to={"/Favourite"}  className='flex items-center' >
+                            <MdFavorite />
+                                <sup className='bg-slate-300 font-[700] rounded-full p-2'>0</sup>
+                            </NavLink>
                     </li>
                     <li>
                         <NavLink to={"/Profile"} ><FaCircleUser /></NavLink>

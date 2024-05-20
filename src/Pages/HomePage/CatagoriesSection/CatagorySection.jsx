@@ -57,7 +57,7 @@ const Catagories2 = Catagories;
             Catagories2.map((catagory, index) => {
               return (
                 <div key={index} className='!w-[90%] p-0'>
-                    <CatagoriesCard name={catagory.name} img={catagory.image}  />
+                    <CatagoriesCard name={catagory.name} img={catagory.image} link={catagory.catagory} />
                 </div>
               );
             })

@@ -48,5 +48,8 @@ button{
 
 
 .favorit-view span{
-  @apply p-2 rounded-full bg-slate-300 cursor-pointer hover:text-white hover:bg-red-800 ease-in-out
+  @apply rounded-full bg-slate-300 cursor-pointer hover:text-white hover:bg-red-800 ease-in-out 
+}
+.favorit-view span svg{
+  @apply p-2 w-[30px] h-[30px]
 }
