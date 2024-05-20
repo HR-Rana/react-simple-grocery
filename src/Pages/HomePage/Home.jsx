@@ -16,11 +16,43 @@ export default function Home() {
              <CatagorySection />
        </section>
        <section>
-          <div className=''>
-              <SecTitle SecTitle={"Fruites Items"} />
-          </div>
           <span>
-              <ProductCatagories ItemCatagory={"Fruites"}  />
+            <div className=''>
+                <SecTitle SecTitle={"Fruites Items"} />
+            </div>
+            <span>
+                <ProductCatagories ItemCatagory={"Fruites"}  />
+            </span>
+          </span>
+       </section> 
+       <section>
+          <span>
+            <div className=''>
+                <SecTitle SecTitle={"Fish Items"} />
+            </div>
+            <span>
+                <ProductCatagories ItemCatagory={"Fishes"}  />
+            </span>
+          </span>
+       </section> 
+       <section>
+          <span>
+            <div className=''>
+                <SecTitle SecTitle={"Soft Drinks Items"} />
+            </div>
+            <span>
+                <ProductCatagories ItemCatagory={"SoftDrinks"}  />
+            </span>
+          </span>
+       </section> 
+       <section>
+          <span>
+            <div className=''>
+                <SecTitle SecTitle={"Vegetable Items"} />
+            </div>
+            <span>
+                <ProductCatagories ItemCatagory={"Vegetables"}  />
+            </span>
           </span>
        </section>
     </div>

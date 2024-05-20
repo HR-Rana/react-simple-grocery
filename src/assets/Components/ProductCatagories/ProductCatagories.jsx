@@ -9,7 +9,6 @@ import ProductCard from '../Cards/ProductCard';
 export default function ProductCatagories({parentClass, ItemCatagory }) {
       
    
-
     const NewValue = AllProducts.filter((items, i)=>{
         return items.catagory === ItemCatagory;
     })
@@ -51,7 +50,7 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
     };
 
   return (
-    <div>
+   
         <div className={`Product-catagory-wise ${parentClass}`}>
         {
                <Slider {...settings} className='p-0 flex !justify-between '>
@@ -70,6 +69,6 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
                                       
                 }
         </div>
-    </div>
+
   )
 }
