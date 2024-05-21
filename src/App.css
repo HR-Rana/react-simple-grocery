@@ -53,3 +53,10 @@ button{
 .favorit-view span svg{
   @apply p-2 w-[30px] h-[30px]
 }
+
+
+
+
+.react-tabs__tab-list{
+  @apply !border-b-0
+}

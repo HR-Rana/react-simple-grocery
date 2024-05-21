@@ -3,7 +3,7 @@
 import Catagory1 from '../Images/product-9.png'
 import Catagory2 from '../Images/category-2.png'
 import Catagory3 from '../Images/deal-img2.png'
-import Catagory4 from '../Images/Drinks/Drink2.png'
+import Catagory4 from '../Images/Drinks/drink2.png'
 
 
 export const Catagories =[
@@ -51,9 +51,9 @@ import fruite5 from '../Images/Fruites/product-5.png';
 
 // soft drinks images
 import drink1 from '../Images/Drinks/Drink1.jpg'
-import drink2 from '../Images/Drinks/Drink2.png'
-import drink3 from '../Images/Drinks/Drink3.jpg'
-import drink4 from '../Images/Drinks/Drink4.jpg'
+import drink2 from '../Images/Drinks/drink2.png'
+import drink3 from '../Images/Drinks/drink3.jpg'
+import drink4 from '../Images/Drinks/drink4.jpg'
 import drink5 from '../Images/Drinks/drink5.jpg'
 // sub images
 
