@@ -7,18 +7,21 @@ import 'react-tabs/style/react-tabs.css';
 import { CiGrid2H } from "react-icons/ci";
 import { IoGrid } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
-
+import { FaStar } from "react-icons/fa";
 
 export default function Shop({id}) {
   const [searchProducts, setSearchProducts]= useState([])
 
   const SearchFunctionality = (e) =>{
     const newValue = e.target.value === AllProducts.name;
-    setSearchProducts({ ...searchProducts, newValue});
     console.log(newValue)
+    return newValue
   }
 
-console.log(searchProducts)
+
+
+  
+
 
   return (
     <main className='w-full'>
@@ -27,14 +30,14 @@ console.log(searchProducts)
           <SecTitle SecTitle={"Shop Now"} classes={'mt-5'} />
         </span>
       <div className="shop-layout w-full ">
-        <div className="Grid-and-searchbar  px-5 py-3  flex justify-between">
-          <span>
-            <input type="search" placeholder='Search any Product...' className='p-2 border border-black' onChange={SearchFunctionality} />
+        <div className="items-center bg-gray-100 px-5 py-3  flex justify-between">
+          <span className='w-[20%]'>
+            <input type="search" placeholder='Search any Product...' className='p-2 rounded-md outline-0 w-full' onChange={SearchFunctionality} />
           </span>
 
           <div className="product-tabs">
         {/* Product tabs buttons */}
-          <TabList>
+          <TabList className={"flex items-center"}>
             <Tab><MdGridOn /></Tab>
             <Tab><IoGrid /></Tab>
             <Tab><CiGrid2H /></Tab>
@@ -43,8 +46,52 @@ console.log(searchProducts)
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between">
-          <div className="left-Asidebar w-[25%]">
-
+          <div className="left-Asidebar sticky top-0 w-[25%]">
+          <div className="clear-filter w-[90%] mt-3 mx-auto">
+                <button className='w-full bg-red-800 space-2'>Clear Filter</button>
+              </div>
+              <div className="filter">
+                <h6>Shop by Price</h6>
+                  <ul>
+                    <li><input type="range" name="" id="" className='w-full cursor-pointer' /></li>
+                </ul>
+              </div>  
+              <div className="filter">
+                <h6>Shop by Catagories</h6>
+                  <ul>
+                    <li><input type="checkbox" name="" id="all" /><label htmlFor="all">All</label></li> 
+                    <li><input type="checkbox" name="" id="vegetable" /><label htmlFor="vegetable">Vegetables</label></li> 
+                    <li><input type="checkbox" name="" id="fish" /><label htmlFor="fish">Fish</label></li>
+                    <li><input type="checkbox" name="" id="Fruit" /><label htmlFor="Fruit">Fruits</label></li>
+                    <li><input type="checkbox" name="" id="drinks" /><label htmlFor="drinks">Drinks</label></li>
+                </ul>
+              </div>   
+              <div className="filter">
+                <h6>Shop by Lavel</h6>
+                  <ul>
+                    <li><input type="checkbox" name="" id="LAll" /><label htmlFor="LAll">All</label></li> 
+                    <li><input type="checkbox" name="" id="New" /><label htmlFor="New">New</label></li> 
+                    <li><input type="checkbox" name="" id="Popular" /><label htmlFor="Popular">Popular</label></li>
+                    <li><input type="checkbox" name="" id="Featured" /><label htmlFor="Featured">Featured</label></li>
+                  </ul>
+              </div> 
+              {/* filter by Rating system */}
+              <div className="filter">
+                <h6 className=''>Shop by Rating</h6>
+                <ul className='flex flex-col mt-2 gap-3 '>
+                  <li value={5}><FaStar/><FaStar/><FaStar/><FaStar/><FaStar />
+                  </li>
+                  <li value={4}><FaStar /><FaStar /><FaStar /><FaStar />
+                  </li> 
+                  <li value={3}><FaStar/><FaStar/><FaStar/>
+                  </li> 
+                  <li value={2}><FaStar/><FaStar/>
+                  </li>
+                  <li value={1}><FaStar  />
+                  </li>
+                </ul>
+              </div>
+              
           </div>
           <div className="right-site-products w-[75%]">
              <TabPanel>

@@ -18,14 +18,15 @@ h3{
   @apply text-[32px]
 }
 h4{
-  @apply text-[28px]
+  @apply text-[28px] font-semibold
 }
 h5{
-  @apply text-[24px]
+  @apply text-[24px] font-semibold
 }
-h5{
-  @apply text-[20px]
+h6{
+  @apply text-[20px] font-semibold
 }
+
 
 section{
   @apply py-5
@@ -59,4 +60,17 @@ button{
 
 .react-tabs__tab-list{
   @apply !border-b-0
+}
+.filter ul{
+  @apply flex flex-col gap-3
+}
+.filter ul li{
+  @apply flex gap-[7px] items-center text-[18px]
+}
+.filter ul li svg{
+  @apply text-orange-400 cursor-pointer text-[24px] 
+}
+
+.filter{
+  @apply shadow-lg w-[90%] flex flex-col mx-auto p-5 rounded-lg gap-2  my-5 bg-gray-50
 }

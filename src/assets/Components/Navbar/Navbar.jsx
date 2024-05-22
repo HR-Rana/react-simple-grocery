@@ -18,7 +18,7 @@ export default function Navbar() {
                 </NavLink>
             </div>
             <nav className='w-[50%] '>
-                <ul className='flex justify-between'>
+                <ul className='flex justify-between items-center'>
                     <li>
                         <NavLink to={"/"} >Home</NavLink>
                     </li>
