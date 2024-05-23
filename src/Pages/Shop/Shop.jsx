@@ -11,7 +11,8 @@ import { FaStar } from "react-icons/fa";
 import Pagination from '../../assets/Components/Pagination/Pagination';
 
 export default function Shop({id}) {
-  const [searchProducts, setSearchProducts]= useState([])
+  const [searchProducts, setSearchProducts]= useState([]);
+  const [ProductSort, ProductsetSort] = useState([])
 
   const SearchFunctionality = (e) =>{
     const newValue = e.target.value === AllProducts.name;
@@ -35,7 +36,7 @@ export default function Shop({id}) {
           <SecTitle SecTitle={"Shop Now"} classes={'mt-5'} />
         </span>
       <div className="shop-layout w-full ">
-        <div className="items-center bg-gray-100 px-5 py-3  flex justify-between">
+        <div className="items-center bg-gray-100 px-5 py-3 mb-5  flex justify-between">
           <span className='w-[20%]'>
             <input type="search" placeholder='Search any Product...' className='p-2 rounded-md outline-0 w-full' onChange={SearchFunctionality} />
           </span>
