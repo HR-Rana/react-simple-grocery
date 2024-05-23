@@ -8,6 +8,7 @@ import { CiGrid2H } from "react-icons/ci";
 import { IoGrid } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
+import Pagination from '../../assets/Components/Pagination/Pagination';
 
 export default function Shop({id}) {
   const [searchProducts, setSearchProducts]= useState([])
@@ -17,6 +18,10 @@ export default function Shop({id}) {
     console.log(newValue)
     return newValue
   }
+
+
+
+  let perPage = 15;
 
 
 
@@ -35,19 +40,29 @@ export default function Shop({id}) {
             <input type="search" placeholder='Search any Product...' className='p-2 rounded-md outline-0 w-full' onChange={SearchFunctionality} />
           </span>
 
-          <div className="product-tabs">
-        {/* Product tabs buttons */}
-          <TabList className={"flex items-center"}>
-            <Tab><MdGridOn /></Tab>
-            <Tab><IoGrid /></Tab>
-            <Tab><CiGrid2H /></Tab>
-          </TabList>
- 
+          <div className="flex justify-between gap-5 items-center">
+            <div className="product-tabs">
+          {/* Product tabs buttons */}
+            <TabList className={"flex items-center"}>
+              <Tab><MdGridOn /></Tab>
+              <Tab><IoGrid /></Tab>
+              <Tab><CiGrid2H /></Tab>
+            </TabList>
+  
+            </div>
+            <div className="sortout">
+              <select name="shop-sort" id="" className='px-3 py-2 rounded-lg outline-none'>
+                <option value="Low-high">Low to high</option>
+                <option value="Low-high">High to Low</option>
+                <option value="Low-high">Newest</option>
+                <option value="Low-high">Popular</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between">
           <div className="left-Asidebar sticky top-0 w-[25%]">
-          <div className="clear-filter w-[90%] mt-3 mx-auto">
+          <div className="clear-filter w-[90%] mt-5 mx-auto">
                 <button className='w-full bg-red-800 space-2'>Clear Filter</button>
               </div>
               <div className="filter">
@@ -136,6 +151,10 @@ export default function Shop({id}) {
                   }
                 </div>
               </TabPanel>
+
+              <div className="pagination-section flex justify-center py-3 mb-5">
+                <Pagination />
+              </div>
           </div>
         </div>
       </div>

@@ -74,3 +74,7 @@ button{
 .filter{
   @apply shadow-lg w-[90%] flex flex-col mx-auto p-5 rounded-lg gap-2  my-5 bg-gray-50
 }
+
+.pagination li{
+  @apply p-2 w-[40px] text-[18px] font-semibold border border-black cursor-pointer flex items-center justify-center h-[35px]
+}
