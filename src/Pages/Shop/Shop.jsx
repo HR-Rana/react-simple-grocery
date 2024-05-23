@@ -14,15 +14,31 @@ export default function Shop({id}) {
   const [searchProducts, setSearchProducts]= useState([]);
   const [ProductSort, ProductsetSort] = useState([])
 
-  const SearchFunctionality = (e) =>{
-    const newValue = e.target.value === AllProducts.name;
-    console.log(newValue)
-    return newValue
+  const [currentPage, setCurrentPage]=useState(1);
+  const [productPerPage, setPerpage] = useState(12)
+
+
+// paginaton
+
+const indexOfLastProduct = currentPage * productPerPage;
+const indexOfFirstProduct = indexOfLastProduct - productPerPage;
+const currentProducts = AllProducts.slice(indexOfFirstProduct, indexOfLastProduct)
+// pagination navbar
+
+const PagesNumber =(pagenmbr)=>{
+  setCurrentPage(pagenmbr);
+}
+
+
+const NextPage=(b)=>{
+  
+  if (b > currentPage && b !== 0) {
+    setCurrentPage(currentPage + 1);
+    console.log("currentPage")
   }
+console.log(currentPage)
+}
 
-
-
-  let perPage = 15;
 
 
 
@@ -38,7 +54,7 @@ export default function Shop({id}) {
       <div className="shop-layout w-full ">
         <div className="items-center bg-gray-100 px-5 py-3 mb-5  flex justify-between">
           <span className='w-[20%]'>
-            <input type="search" placeholder='Search any Product...' className='p-2 rounded-md outline-0 w-full' onChange={SearchFunctionality} />
+            <input type="search" placeholder='Search any Product...' className='p-2 rounded-md outline-0 w-full' onChange={''} />
           </span>
 
           <div className="flex justify-between gap-5 items-center">
@@ -113,7 +129,7 @@ export default function Shop({id}) {
              <TabPanel>
              <div className='grid w-[100%] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
               {
-                AllProducts.map((items, index)=>{
+                currentProducts.map((items, index)=>{
                   const {name,id, rating, price, off, stock, lavel, image,sold }= items;
                   return(
                     <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
@@ -154,7 +170,12 @@ export default function Shop({id}) {
               </TabPanel>
 
               <div className="pagination-section flex justify-center py-3 mb-5">
-                <Pagination />
+                <Pagination 
+                  PerPage={productPerPage}
+                  totalProduct={AllProducts.length}
+                  pageNumber={PagesNumber}
+                  next={NextPage}
+                />
               </div>
           </div>
         </div>

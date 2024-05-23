@@ -7,6 +7,7 @@ import FavoritePage from '../Pages/Favourite/Favorite'
 import Shop from '../Pages/Shop/Shop'
 import ProductView from '../Pages/Shop/SingleProduct/ProductView'
 import About from '../Pages/About/About'
+import Contact from '../Pages/Contact/Contact'
 
 export default function Routing() {
   return (
@@ -18,6 +19,7 @@ export default function Routing() {
         <Route path='/Cart' element={<Cart />} />
         <Route path='/Favorite' element={<FavoritePage />} />
         <Route path='/Profile' element={<ProfilePage />} />
+        <Route path='/Contact' element={<Contact />} />
     </Routes>
   )
 }

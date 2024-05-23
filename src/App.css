@@ -97,3 +97,6 @@ button{
 .pagination button{
   @apply bg-gray-500
 }
+.pagination .active{
+  @apply bg-gray-400 text-black
+}
