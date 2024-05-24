@@ -19,8 +19,6 @@ export const SingleFilter = (itemInfo, data) => {
     const result = AllProducts.filter((item, i) => {
         item.itemInfo === data;
     })
-
-    console.log(itemInfo, data, result)
 }
 
 
@@ -30,5 +28,6 @@ export const SliceProduct = (a, b) => {
     const Result = AllProducts.slice(a, b);
     return Result
 }
+
 
 

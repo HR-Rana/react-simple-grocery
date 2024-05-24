@@ -49,10 +49,16 @@ section{
 }
 
 button{
-  @apply p-2 bg-[green] text-white font-[700] capitalize rounded-lg px-5 capitalize
+  @apply p-2 bg-[green] text-white font-[700] capitalize rounded-lg px-5 
 }
 
 
+.banner-img{
+  @apply  p-5 flex items-center justify-center
+}
+.banner-img img{
+  @apply w-[80%] h-[70%]
+}
 
 .slick-slider  .slick-next, .slick-slider .slick-prev{
   @apply !hidden absolute left-0 top-full
