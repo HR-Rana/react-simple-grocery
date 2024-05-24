@@ -1,12 +1,10 @@
 import React from 'react'
 
-export default function Advertise({bnrSize, img}) {
+export default function Advertise({bnrSize, img, imgClass}) {
   return (
-    <div className='advertise-banner'>
-        <div className={`${bnrSize} p-3`}>
-            <div className="banner-img">
-                <img src={img} alt="banner" />
-            </div>
+    <div className={`${bnrSize} advertise-banner`}>
+        <div className="banner-img">
+             <img src={img} alt="banner" className={`${imgClass}`} />
         </div>
     </div>
   )

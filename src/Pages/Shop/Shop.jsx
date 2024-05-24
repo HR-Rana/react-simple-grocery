@@ -11,6 +11,16 @@ import { FaStar } from "react-icons/fa";
 import Pagination from '../../assets/Components/Pagination/Pagination';
 import { SingleFilter } from '../../assets/Functions/Functions';
 import VerticalSlide from '../../lib/VerticalSlide/VerticalSlide';
+import Advertise from '../../assets/Components/AdvertiseBanner/Advertise';
+
+
+
+
+import addBanner from '../../assets/Images/Advertisement/banner/banners (4).jpg'
+
+
+
+
 
 export default function Shop({id}) {
   const [searchProducts, setSearchProducts]= useState([]);
@@ -52,7 +62,6 @@ console.log(Featured)
 
   return (
     <main className='w-full'>
-      <Tabs>
         <span className='text-center'>
           <SecTitle SecTitle={"Shop Now"} classes={'mt-5'} />
         </span>
@@ -136,6 +145,7 @@ console.log(Featured)
               </div>
           </div>
           <div className="right-site-products w-[75%]">
+            <Tabs>
              <TabPanel>
              <div className='grid w-[100%] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
               {
@@ -187,10 +197,16 @@ console.log(Featured)
                   next={NextPage}
                 />
               </div>
+              </Tabs>
+
+              <section>
+                <div className="advertisement-banner-image px-3">
+                  <Advertise img={addBanner} bnrSize={"w-[95% mx-auto ] rounded-lg shadow-md bg-gray-50 "}  imgClass={"rounded-md !w-full"}/>
+                </div>
+              </section>
           </div>
         </div>
       </div>
-      </Tabs>
     </main>
   )
 }
