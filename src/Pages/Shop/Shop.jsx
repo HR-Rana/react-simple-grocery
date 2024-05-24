@@ -9,7 +9,7 @@ import { IoGrid } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import Pagination from '../../assets/Components/Pagination/Pagination';
-import { SingleFilter } from '../../assets/Functions/Functions';
+import { RandomProduct, SingleFilter } from '../../assets/Functions/Functions';
 import VerticalSlide from '../../lib/VerticalSlide/VerticalSlide';
 import Advertise from '../../assets/Components/AdvertiseBanner/Advertise';
 
@@ -42,21 +42,19 @@ const PagesNumber =(pagenmbr)=>{
 }
 
 
-const NextPage=(b)=>{
-  
-  if (b > currentPage && b !== 0) {
-    setCurrentPage(currentPage + 1);
-    console.log("currentPage")
-  }
-console.log(currentPage)
-}
+
+
+ const Prices = AllProducts.map((item, i)=>{
+    return item.price
+ });
+console.log(Prices)
+
+
 
 
 
 // single featured filter data
-
 const Featured = SingleFilter("Name", "Apple");
-console.log(Featured)
   SingleFilter(Featured)
 
 
@@ -194,7 +192,7 @@ console.log(Featured)
                   PerPage={productPerPage}
                   totalProduct={AllProducts.length}
                   pageNumber={PagesNumber}
-                  next={NextPage}
+                  next={''}
                 />
               </div>
               </Tabs>
@@ -202,6 +200,12 @@ console.log(Featured)
               <section>
                 <div className="advertisement-banner-image px-3">
                   <Advertise img={addBanner} bnrSize={"w-[95% mx-auto ] rounded-lg shadow-md bg-gray-50 "}  imgClass={"rounded-md !w-full"}/>
+                </div>
+              </section>
+              <section>
+                <div>
+                  <h3>Recently Visited</h3>
+
                 </div>
               </section>
           </div>

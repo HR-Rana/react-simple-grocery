@@ -30,4 +30,15 @@ export const SliceProduct = (a, b) => {
 }
 
 
+export const MinToMax = (data) => {
+    const Result = data.sort((a, b) => a - b);
+}
 
+export const MaxToMin = (data) => {
+    const Result = data.sort((a, b) => (a + b))
+}
+
+
+export const RandomProduct = (arry) => {
+    console.log(arry[Math.ceil(Math.random() * arry.length)])
+}

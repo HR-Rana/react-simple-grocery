@@ -6,6 +6,8 @@ import SecTitle from '../../assets/Components/SectionTitle/SecTitle'
 import ProductCatagories from '../../assets/Components/ProductCatagories/ProductCatagories'
 import Advertise from '../../assets/Components/AdvertiseBanner/Advertise'
 
+
+import adsBanner from '../../assets/Images/Advertisement/banner/banners (4).jpg'
 import addBanner from '../../assets/Images/Advertisement/banner/banners (3).jpg'
 import video1 from '../../assets/Images/Advertisement/Videos/BannerVideo (3).mp4'
 import video2 from '../../assets/Images/Advertisement/Videos/BannerVideo (5).mp4'
@@ -42,6 +44,12 @@ export default function Home() {
               </div>
           </div>
         </section>
+        <section>
+          <div className="advertisement-banner-image p-2">
+            <Advertise img={addBanner} bnrSize={"w-[95% mx-auto ] rounded-lg shadow-md bg-gray-50 "}  imgClass={"rounded-md !w-full max-h-[400px] object-cover"}/>
+          </div>
+        </section>
+
        <section>
           <span>
             <div className='' id='Fish'>
@@ -52,11 +60,7 @@ export default function Home() {
             </span>
           </span>
        </section> 
-       <section>
-          <div className="advertisement-banner-image p-2">
-            <Advertise img={addBanner} bnrSize={"w-[95% mx-auto ] rounded-lg shadow-md bg-gray-50 "}  imgClass={"rounded-md !w-full max-h-[400px] object-cover"}/>
-          </div>
-        </section>
+      
        <section id='Drinks'>
           <span>
             <div className=''>
@@ -67,6 +71,11 @@ export default function Home() {
             </span>
           </span>
        </section> 
+       <section>
+          <div className="advertisement-banner-image px-3">
+              <Advertise img={adsBanner} bnrSize={"w-[95% mx-auto ] rounded-lg shadow-md bg-gray-50 "}  imgClass={"rounded-md !w-full"}/>
+          </div>
+        </section>
        <section id='Vegetables'>
           <span>
             <div className=''>
