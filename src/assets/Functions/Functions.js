@@ -26,3 +26,9 @@ export const SingleFilter = (itemInfo, data) => {
 
 
 
+export const SliceProduct = (a, b) => {
+    const Result = AllProducts.slice(a, b);
+    return Result
+}
+
+
