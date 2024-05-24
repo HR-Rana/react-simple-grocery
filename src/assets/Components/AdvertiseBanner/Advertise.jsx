@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default function Advertise({bnrSize, img, imgClass}) {
+export default function Advertise({bnrSize, img, video,videoClass, imgClass}) {
   return (
     <div className={`${bnrSize} advertise-banner`}>
-        <div className="banner-img">
-             <img src={img} alt="banner" className={`${imgClass}`} />
+        <div className="Adverting-img">
+             {
+                video? <video src={video} autoPlay loop alt="mp4" className={videoClass}></video> :
+                <img src={img} alt="advertise" className={`${imgClass}`} />
+             }
         </div>
     </div>
   )

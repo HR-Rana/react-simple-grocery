@@ -7,7 +7,8 @@ import ProductCatagories from '../../assets/Components/ProductCatagories/Product
 import Advertise from '../../assets/Components/AdvertiseBanner/Advertise'
 
 import addBanner from '../../assets/Images/Advertisement/banner/banners (3).jpg'
-
+import video1 from '../../assets/Images/Advertisement/Videos/BannerVideo (3).mp4'
+import video2 from '../../assets/Images/Advertisement/Videos/BannerVideo (5).mp4'
 
 
 
@@ -31,6 +32,16 @@ export default function Home() {
             </span>
           </span>
        </section> 
+       <section>
+          <div className="advertisement-banner-image gap-3 grid grid-cols-1 md:grid-cols-2">
+              <div className=''>
+                  <Advertise video={video2} bnrSize={"w-[95% mx-auto] "}  videoClass={"rounded-md !w-full max-h-[350px] object-cover"}/>
+              </div> 
+              <div className=''>
+                 <Advertise video={video1} bnrSize={"w-[95% mx-auto] "}  videoClass={"rounded-md !w-full max-h-[350px] object-cover"}/>
+              </div>
+          </div>
+        </section>
        <section>
           <span>
             <div className='' id='Fish'>
