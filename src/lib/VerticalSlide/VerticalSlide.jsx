@@ -1,46 +1,54 @@
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
+import { AllProducts } from '../../assets/DemoData/ProductData';
+import { Link } from 'react-router-dom';
 
-import './styles.css';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
-
-export default function VerticalSlide({mapProduct}) {
+export default function VerticalSlide() {
   return (
-    <>
-      <Swiper
-        direction={'vertical'}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {
-            mapProduct.map((items, i)=>{
-                return(
-                    <div className='' key={i}>
-                         <SwiperSlide>
-                            <div className='card'>
-                                <div className="card-header">
-                                    
-                                </div>
-                            </div>
-                         </SwiperSlide>
-                    </div>
-                )
-            })
-        }
-      </Swiper>
-    </>
+    <Swiper
+      slidesPerView={1}
+      autoplay={true}
+      onDurationChange={500}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+     {
+      AllProducts.map((pd, i)=>{
+        return(
+          <SwiperSlide key={i}>
+          <div className='Product card shadow-lg'>
+              <Link to={`/Product/${pd.id}`}>
+                <div className="card-header">
+                    <img src={pd.image} alt={pd.Name} />
+              </div>
+                <div className="card-body">
+                    <h5>Name:{pd.name}</h5>
+                    <h6>Price: {pd.price}</h6>
+                    <p>Total-Sold: {pd.sold}</p>
+                </div>
+              </Link>
+          </div>
+        </SwiperSlide>
+        )
+      })
+       
+
+     }
+     
+    </Swiper>
   );
-}
+};
+
+
+
+
+
+
+
+
 
 
 

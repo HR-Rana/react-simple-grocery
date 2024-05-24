@@ -9,6 +9,8 @@ import { IoGrid } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import Pagination from '../../assets/Components/Pagination/Pagination';
+import { SingleFilter } from '../../assets/Functions/Functions';
+import VerticalSlide from '../../lib/VerticalSlide/VerticalSlide';
 
 export default function Shop({id}) {
   const [searchProducts, setSearchProducts]= useState([]);
@@ -41,8 +43,11 @@ console.log(currentPage)
 
 
 
+// single featured filter data
 
-  
+const Featured = SingleFilter("Name", "Apple");
+console.log(Featured)
+  SingleFilter(Featured)
 
 
   return (
@@ -123,7 +128,12 @@ console.log(currentPage)
                   </li>
                 </ul>
               </div>
-              
+              <div className='vertical-product filter'>
+                <h6>Featured Products</h6>
+                <div className=''>
+                  <VerticalSlide mapProduct={Featured} />
+                </div>
+              </div>
           </div>
           <div className="right-site-products w-[75%]">
              <TabPanel>

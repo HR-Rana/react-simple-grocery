@@ -49,6 +49,10 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
       ]
     };
 
+    const arry = [5,25, 5, 36, 36, 5, 8,25];
+    const result = new Set(arry);
+    console.log(result)
+
   return (
    
         <div className={`Product-catagory-wise ${parentClass}`}>
