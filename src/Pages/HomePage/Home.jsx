@@ -4,6 +4,12 @@ import OfferSection from './Offer/OfferSection'
 import CatagorySection from './CatagoriesSection/CatagorySection'
 import SecTitle from '../../assets/Components/SectionTitle/SecTitle'
 import ProductCatagories from '../../assets/Components/ProductCatagories/ProductCatagories'
+import Advertise from '../../assets/Components/AdvertiseBanner/Advertise'
+
+import addBanner from '../../assets/Images/Advertisement/banner/banners (3).jpg'
+
+
+
 
 export default function Home() {
   return (
@@ -35,6 +41,11 @@ export default function Home() {
             </span>
           </span>
        </section> 
+       <section>
+          <div className="advertisement-banner-image p-2">
+            <Advertise img={addBanner} bnrSize={"w-[95% mx-auto ] rounded-lg shadow-md bg-gray-50 "}  imgClass={"rounded-md !w-full max-h-[400px] object-cover"}/>
+          </div>
+        </section>
        <section id='Drinks'>
           <span>
             <div className=''>
