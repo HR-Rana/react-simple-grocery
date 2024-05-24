@@ -32,7 +32,7 @@ export default function Home() {
             </span>
           </span>
        </section> 
-       <section>
+       <section className='my-8 px-2 py-10 bg-gray-100'>
           <div className="advertisement-banner-image gap-3 grid grid-cols-1 md:grid-cols-2">
               <div className=''>
                   <Advertise video={video2} bnrSize={"w-[95% mx-auto] "}  videoClass={"rounded-md !w-full max-h-[350px] object-cover"}/>
