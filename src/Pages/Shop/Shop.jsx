@@ -155,38 +155,38 @@ const Featured = SingleFilter("Name", "Apple");
           </div>
           <div className="right-site-products w-[75%]">
             <Tabs>
-             <TabPanel>
-             <div className='grid w-[100%] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
-              {
-                currentProducts.map((items, index)=>{
-                  const {name,id, rating, price, off, stock, lavel, image,sold }= items;
-                  return(
-                    <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
-                      <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
-                    </div>
-                  )
-                })
-              }
-            </div>
-              </TabPanel> 
               <TabPanel>
-                <div className='grid w-[100%] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 my-3'>
-                  {
-                    AllProducts.map((items, index)=>{
-                      const {name,id, rating, price, off, stock, lavel, image,sold }= items;
-                      return(
-                        <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
-                          <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
-                        </div>
-                      )
-                    })
-                  }
-                </div>
-                </TabPanel>
-              <TabPanel>
+              <div className='grid w-[100%] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
+                {
+                  currentProducts.map((items, index)=>{
+                    const {name,id, rating, price, off, stock, lavel, image,sold }= items;
+                    return(
+                      <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
+                        <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
+                      </div>
+                    )
+                  })
+                }
+              </div>
+                  </TabPanel> 
+                      <TabPanel>
+                  <div className='grid w-[100%] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 my-3'>
+                    {
+                      currentProducts.map((items, index)=>{
+                        const {name,id, rating, price, off, stock, lavel, image,sold }= items;
+                        return(
+                          <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
+                            <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                  </TabPanel>
+                <TabPanel>
                 <div className='grid grid-cols-1  lg:grid-cols-1 my-3'>
                   {
-                    AllProducts.map((items, index)=>{
+                    currentProducts.map((items, index)=>{
                       const {name,id, rating, price, off, stock, lavel, image,sold }= items;
                       return(
                         <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
@@ -197,7 +197,7 @@ const Featured = SingleFilter("Name", "Apple");
                   }
                 </div>
               </TabPanel>
-
+              </Tabs>
               <div className="pagination-section flex justify-center py-3 mb-5">
                 <Pagination 
                   PerPage={productPerPage}
@@ -206,7 +206,6 @@ const Featured = SingleFilter("Name", "Apple");
                   next={''}
                 />
               </div>
-              </Tabs>
 
               <section>
                 <div className="advertisement-banner-image px-3">

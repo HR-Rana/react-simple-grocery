@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AllProducts } from '../../../assets/DemoData/ProductData';
 import { FaStar } from "react-icons/fa";
+import SecTitle from '../../../assets/Components/SectionTitle/SecTitle';
+import ProductCatagories from '../../../assets/Components/ProductCatagories/ProductCatagories';
 
 
 
@@ -23,6 +25,13 @@ export default function ProductView() {
     const data = AllProducts.find((item, index)=>{
         return item.id == Id;
     })
+
+    const RelatedProduct  = (data)=>{
+      console.log(data)
+      const Result = AllProducts.map((item)=> item.catagory === data);
+      console.log(Result);
+      return(Result)
+    }
 
 
 
@@ -87,6 +96,16 @@ export default function ProductView() {
             </span>
           </div>
       </div>
+      <section className='Fruites'>
+          <span>
+            <div className=''>
+                <SecTitle SecTitle={"Related Products"} />
+            </div>
+            <span>
+                <ProductCatagories ItemCatagory={data.catagory}  />
+            </span>
+          </span>
+       </section> 
     </main>
   )
 }

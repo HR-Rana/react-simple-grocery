@@ -12,6 +12,8 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
     const NewValue = AllProducts.filter((items, i)=>{
         return items.catagory === ItemCatagory;
     })
+
+    console.log(NewValue)
   
     // slider settings
     var settings = {
@@ -49,9 +51,7 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
       ]
     };
 
-    const arry = [5,25, 5, 36, 36, 5, 8,25];
-    const result = new Set(arry);
-    console.log(result)
+    
 
   return (
    
