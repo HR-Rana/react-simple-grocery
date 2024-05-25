@@ -63,7 +63,7 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
                     const {name, price, image, sold, id, rating, stock, lavel, off} = items;
                     return(
                     <div key={i} className='justify-between'>
-                         <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3 w-[90%] "} />
+                         <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3 w-[90%]"} />
                     </div>
                     )
                   })

@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="navigation-bar bg-gray-200 p-5 flex items-center sticky top-0 px-5 justify-between gap-5 w-full">
             <div className="logo">
                 <NavLink to={"/"} >
-                    <span className='flex items-center gap-2'><FaShoppingBasket className='text-[30px]'/> <h5 className='font-[600]'>Grocery</h5></span>
+                    <span className='flex items-center gap-2 text-red-700'><FaShoppingBasket className='text-[30px]'/> <h5 className='font-[600] text-[28px] text-green-600'>Grocery</h5></span>
                 </NavLink>
             </div>
             <nav className='w-[50%] '>

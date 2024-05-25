@@ -46,18 +46,18 @@ const Catagories2 = Catagories;
 
 
   return (
-    <div>
+    <div className='py-10'>
       <span>
         <SecTitle SecTitle={'Shop by Catagory'} />
       </span>
 
-      <div className='sec-contain py-10'>
+      <div className='sec-contain mt-5'>
         <Slider {...settings} className='p-0 flex justify-between '>
            {
             Catagories2.map((catagory, index) => {
               return (
                 <div key={index} className='!w-[90%] p-0'>
-                    <CatagoriesCard name={catagory.name} img={catagory.image} link={catagory.catagory} />
+                    <CatagoriesCard name={catagory.name} imgClass={'mx-auto flex items-center'} img={catagory.image} bodyclass={"object-cover flex items-center h-[250px] md:h-[350px]"} link={catagory.catagory} />
                 </div>
               );
             })
