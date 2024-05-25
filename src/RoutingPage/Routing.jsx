@@ -8,10 +8,12 @@ import Shop from '../Pages/Shop/Shop'
 import ProductView from '../Pages/Shop/SingleProduct/ProductView'
 import About from '../Pages/About/About'
 import Contact from '../Pages/Contact/Contact'
+import NotFound from '../assets/Components/NotFound/NotFound'
 
 export default function Routing() {
   return (
     <Routes>
+        <Route path='/*' element={<NotFound />} />
         <Route path='/' element={<Home />} /> 
         <Route path='/Shop' element={<Shop />} /> 
         <Route path='/About' element={<About />} /> 

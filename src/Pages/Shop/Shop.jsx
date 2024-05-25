@@ -9,7 +9,7 @@ import { IoGrid } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import Pagination from '../../assets/Components/Pagination/Pagination';
-import { RandomProduct, SingleFilter } from '../../assets/Functions/Functions';
+import { MaxToMin, RandomProduct, SingleFilter } from '../../assets/Functions/Functions';
 import VerticalSlide from '../../lib/VerticalSlide/VerticalSlide';
 import Advertise from '../../assets/Components/AdvertiseBanner/Advertise';
 
@@ -24,7 +24,8 @@ import addBanner from '../../assets/Images/Advertisement/banner/banners (4).jpg'
 
 export default function Shop({id}) {
   const [searchProducts, setSearchProducts]= useState([]);
-  const [ProductSort, ProductsetSort] = useState([])
+  const [ProductSort, ProductsetSort] = useState([]);
+  const [shopProduct, setShopProduct] = useState([])
 
   const [currentPage, setCurrentPage]=useState(1);
   const [productPerPage, setPerpage] = useState(12)
@@ -44,13 +45,23 @@ const PagesNumber =(pagenmbr)=>{
 
 
 
- const Prices = AllProducts.map((item, i)=>{
-    return item.price
- });
-console.log(Prices)
+//  let Prices = AllProducts.map((item, i)=>{
+//     return item.price
+//  });
+// console.log(Prices)
 
 
 
+const SelectionFilterHandler =(e)=>{
+    e.preventDefault();
+    if (e.target.value === "High-low") {
+     const Result = AllProducts.map((items, i)=>items.price)
+        setShopProduct(MaxToMin(Result));
+     return Result
+    }else{
+      console.log("couldn't found")
+    }
+}
 
 
 // single featured filter data
@@ -80,11 +91,11 @@ const Featured = SingleFilter("Name", "Apple");
   
             </div>
             <div className="sortout">
-              <select name="shop-sort" id="" className='px-3 py-2 rounded-lg outline-none'>
+              <select name="shop-sort" id="" className='px-3 py-2 rounded-lg outline-none' onChange={(e)=>{SelectionFilterHandler(e)}}>
                 <option value="Low-high">Low to high</option>
-                <option value="Low-high">High to Low</option>
-                <option value="Low-high">Newest</option>
-                <option value="Low-high">Popular</option>
+                <option value="High-low">High to Low</option>
+                <option value="Newset">Newest</option>
+                <option value="Popular">Popular</option>
               </select>
             </div>
           </div>

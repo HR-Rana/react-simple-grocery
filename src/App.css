@@ -44,6 +44,12 @@ h6{
 }
 
 
+nav ul li svg{
+  @apply text-[20px]
+}
+
+
+
 section{
   @apply py-10
 }

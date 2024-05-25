@@ -46,10 +46,10 @@ export default function ProductView() {
   return (
     <main className='py-10'>
       <div className='grid grid-cols-1 md:grid-cols-2'>
-         <div className=''>
+         <div className='w-[95%] mx-auto'>
            <img src={data.image} alt={data.name} />
          </div>
-          <div>
+          <div className='w-[95%] mx-auto'>
             <span className=''>
                 <h4>{data.name}</h4>
                 <br />
@@ -58,7 +58,7 @@ export default function ProductView() {
                   <p className='font-semibold'>Sold: {data.sold}</p>
                 </span>
 
-                <span className='flex gap-2 items-center'>
+                <span className='flex gap-2 mb-2 items-center'>
                     <h6>Price: <span className='text-red-600'>{data.price}</span> Tk</h6>
                    {
                      data.weight?
@@ -76,7 +76,7 @@ export default function ProductView() {
                     <h5>Product Quantity:</h5>
                     <form action="" className='flex gap-3 mt-5'>
                      <input type="button" value="-" className='discreament' onClick={()=> handleDiscrease()} />
-                      <input type="number" name="" id=""  value={quantity}  className='border-[1px] w-[60px] outline-none'/>
+                      <input type="number" name="" id=""  value={quantity} onChange={(e)=>{setQuantity(parseInt(e.target.value))}} className='border-[1px] w-[60px] outline-none font-semibold'/>
                      <input type="button" value="+" className='increament' onClick={()=> handleIncrease()} />
                     </form>
                   <div className="buttons my-6 flex flex-col gap-3 w-1/2">
