@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import { AllProducts } from '../../assets/DemoData/ProductData'
 import ProductCard from '../../assets/Components/Cards/ProductCard';
 import SecTitle from '../../assets/Components/SectionTitle/SecTitle';
@@ -17,6 +17,7 @@ import Advertise from '../../assets/Components/AdvertiseBanner/Advertise';
 
 
 import addBanner from '../../assets/Images/Advertisement/banner/banners (4).jpg'
+import { ProductReducer, initialState } from '../../assets/Reducer/ProductReducer';
 
 
 
@@ -42,7 +43,14 @@ const PagesNumber =(pagenmbr)=>{
   setCurrentPage(pagenmbr);
 }
 
+const data = "hello world"
 
+const [state, dispach] = useReducer(ProductReducer, initialState)
+   
+
+
+
+    console.log(state);
 
 
 //  let Prices = AllProducts.map((item, i)=>{
@@ -71,15 +79,17 @@ const Featured = SingleFilter("Name", "Apple");
 
   return (
     <main className='w-full'>
+       <Tabs>
         <span className='text-center'>
           <SecTitle SecTitle={"Shop Now"} classes={'mt-5'} />
         </span>
+       
       <div className="shop-layout w-full ">
         <div className="items-center bg-gray-100 px-5 py-3 mb-5  flex justify-between">
           <span className='w-[20%]'>
             <input type="search" placeholder='Search any Product...' className='p-2 rounded-md outline-0 w-full' onChange={''} />
           </span>
-
+          
           <div className="flex justify-between gap-5 items-center">
             <div className="product-tabs">
           {/* Product tabs buttons */}
@@ -102,7 +112,7 @@ const Featured = SingleFilter("Name", "Apple");
         </div>
         <div className="flex flex-col md:flex-row justify-between">
           <div className="left-Asidebar sticky top-0 w-[25%]">
-          <div className="clear-filter w-[90%] mt-5 mx-auto">
+              <div className="clear-filter w-[90%] mt-5 mx-auto">
                 <button className='w-full bg-red-800 space-2'>Clear Filter</button>
               </div>
               <div className="filter">
@@ -154,7 +164,7 @@ const Featured = SingleFilter("Name", "Apple");
               </div>
           </div>
           <div className="right-site-products w-[75%]">
-            <Tabs>
+            
               <TabPanel>
               <div className='grid w-[100%] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3'>
                 {
@@ -168,8 +178,8 @@ const Featured = SingleFilter("Name", "Apple");
                   })
                 }
               </div>
-                  </TabPanel> 
-                      <TabPanel>
+              </TabPanel> 
+                  <TabPanel>
                   <div className='grid w-[100%] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 my-3'>
                     {
                       currentProducts.map((items, index)=>{
@@ -183,7 +193,7 @@ const Featured = SingleFilter("Name", "Apple");
                     }
                   </div>
                   </TabPanel>
-                <TabPanel>
+              <TabPanel>
                 <div className='grid grid-cols-1  lg:grid-cols-1 my-3'>
                   {
                     currentProducts.map((items, index)=>{
@@ -197,7 +207,6 @@ const Featured = SingleFilter("Name", "Apple");
                   }
                 </div>
               </TabPanel>
-              </Tabs>
               <div className="pagination-section flex justify-center py-3 mb-5">
                 <Pagination 
                   PerPage={productPerPage}
@@ -220,7 +229,12 @@ const Featured = SingleFilter("Name", "Apple");
               </section>
           </div>
         </div>
-      </div>
+        <button onClick={()=>dispach({
+          type:"CHANGE_NAME",
+          payload:data
+  })}>Check dispatch</button>
+        </div>
+        </Tabs>
     </main>
   )
 }

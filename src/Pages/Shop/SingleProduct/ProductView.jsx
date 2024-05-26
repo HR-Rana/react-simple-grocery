@@ -4,6 +4,8 @@ import { AllProducts } from '../../../assets/DemoData/ProductData';
 import { FaStar } from "react-icons/fa";
 import SecTitle from '../../../assets/Components/SectionTitle/SecTitle';
 import ProductCatagories from '../../../assets/Components/ProductCatagories/ProductCatagories';
+import { useReducer } from 'react';
+import { InteractiveInit, UserInteractiveReducer } from '../../../assets/Reducer/UserInteractiveReducer';
 
 
 
@@ -16,42 +18,29 @@ import ProductCatagories from '../../../assets/Components/ProductCatagories/Prod
 
 
 export default function ProductView() {
-    const { Id } = useParams();
+const { Id } = useParams();
+const [state, dispatch] = useReducer(UserInteractiveReducer, InteractiveInit)
+const data = AllProducts.find((item)=>{
+       return item.id == Id;
+  })
 
-    const [quantity, setQuantity]=useState(1)
-    const [increase, setIncrease] = useState();
-    const [discrease, setDiscrease]=useState()
-
-    const data = AllProducts.find((item, index)=>{
-        return item.id == Id;
-    })
-
-    const RelatedProduct  = (data)=>{
-      console.log(data)
-      const Result = AllProducts.map((item)=> item.catagory === data);
-      console.log(Result);
-      return(Result)
-    }
 
 
 
    
 
 
-    const handleIncrease = ()=>{
-      if(quantity >= 0){
-          setQuantity(quantity + 1)
-      }
-    } 
     
-    const handleDiscrease = ()=>{
-      if(quantity >= 2){
-          setQuantity(quantity - 1)
-      }
+// HANDLE QUANTITY BY REDUCER
+    const DicreaseQuantity =()=>{
+        if(state.PQuantity > 1){
+          dispatch({
+            type:"Quantity_DICREASE"
+          })
+        }
     }
 
-
-
+    
   return (
     <main className='py-10'>
       <div className='grid grid-cols-1 md:grid-cols-2'>
@@ -84,9 +73,9 @@ export default function ProductView() {
                       <br />
                     <h5>Product Quantity:</h5>
                     <form action="" className='flex gap-3 mt-5'>
-                     <input type="button" value="-" className='discreament' onClick={()=> handleDiscrease()} />
-                      <input type="number" name="" id=""  value={quantity} onChange={(e)=>{setQuantity(parseInt(e.target.value))}} className='border-[1px] w-[60px] outline-none font-semibold'/>
-                     <input type="button" value="+" className='increament' onClick={()=> handleIncrease()} />
+                     <input type="button" value="-" className='discreament' onClick={()=> DicreaseQuantity()} />
+                      <input type="number" name="" id=""  value={state.PQuantity} onChange={(e)=>{setQuantity(parseInt(e.target.value))}} className='border-[1px] w-[60px] outline-none font-semibold'/>
+                     <input type="button" value="+" className='increament' onClick={()=> dispatch({type:"QUANTITY_INCREASE"})} />
                     </form>
                   <div className="buttons my-6 flex flex-col gap-3 w-1/2">
                       <button className='bg-red-700'>Add to Cart</button>
