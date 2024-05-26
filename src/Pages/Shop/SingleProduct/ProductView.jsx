@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { AllProducts } from '../../../assets/DemoData/ProductData';
 import { FaStar } from "react-icons/fa";
 import SecTitle from '../../../assets/Components/SectionTitle/SecTitle';
@@ -79,7 +79,7 @@ const data = AllProducts.find((item)=>{
                     </form>
                   <div className="buttons my-6 flex flex-col gap-3 w-1/2">
                       <button className='bg-red-700'>Add to Cart</button>
-                      <button>Buy Now</button>
+                      <button><Link to={"/Checkout"}>Buy Now</Link></button>
                   </div>
                 </div>
             </span>

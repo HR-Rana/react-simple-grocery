@@ -9,6 +9,7 @@ import ProductView from '../Pages/Shop/SingleProduct/ProductView'
 import About from '../Pages/About/About'
 import Contact from '../Pages/Contact/Contact'
 import NotFound from '../assets/Components/NotFound/NotFound'
+import Checkout from '../Pages/CheckoutPage/Checkout'
 
 export default function Routing() {
   return (
@@ -18,6 +19,7 @@ export default function Routing() {
         <Route path='/Shop' element={<Shop />} /> 
         <Route path='/About' element={<About />} /> 
         <Route path='/Product/:Id' element={<ProductView />} /> 
+        <Route path='/Checkout' element={<Checkout />} /> 
         <Route path='/Cart' element={<Cart />} />
         <Route path='/Favorite' element={<FavoritePage />} />
         <Route path='/Profile' element={<ProfilePage />} />

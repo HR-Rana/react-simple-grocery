@@ -4,6 +4,17 @@ export let InteractiveInit = {
     AddFav: [],
     UserAuth: false,
     PQuantity: 1,
+    RecentlyViewd: [],
+    deliveryInfo: {
+        name: "",
+        email: "",
+        phone: "",
+        Disctrict: "",
+        SubDiscrtict: " ",
+        homeTown: " ",
+        ZipCode: " ",
+        RoadInfo: " "
+    },
 }
 
 
@@ -44,6 +55,11 @@ export let UserInteractiveReducer = (state, action) => {
             return {
                 ...state,
                 UserAuth: action.payload
+            }
+        case "VISITED_PRODUCT":
+            return {
+                ...state,
+                RecentlyViewd: action.payload
             }
         default:
             return state

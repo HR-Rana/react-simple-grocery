@@ -9,7 +9,7 @@ import { IoGrid } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import Pagination from '../../assets/Components/Pagination/Pagination';
-import { MaxToMin, RandomProduct, SingleFilter } from '../../assets/Functions/Functions';
+import { AddToCartHandler, MaxToMin, RandomProduct, SingleFilter } from '../../assets/Functions/Functions';
 import VerticalSlide from '../../lib/VerticalSlide/VerticalSlide';
 import Advertise from '../../assets/Components/AdvertiseBanner/Advertise';
 
@@ -18,9 +18,6 @@ import Advertise from '../../assets/Components/AdvertiseBanner/Advertise';
 
 import addBanner from '../../assets/Images/Advertisement/banner/banners (4).jpg'
 import { ProductReducer, initialState } from '../../assets/Reducer/ProductReducer';
-
-
-
 
 
 export default function Shop({id}) {
@@ -47,19 +44,6 @@ const data = "hello world"
 
 const [state, dispach] = useReducer(ProductReducer, initialState)
    
-
-
-
-    console.log(state);
-
-
-//  let Prices = AllProducts.map((item, i)=>{
-//     return item.price
-//  });
-// console.log(Prices)
-
-
-
 const SelectionFilterHandler =(e)=>{
     e.preventDefault();
     if (e.target.value === "High-low") {
@@ -200,7 +184,7 @@ const Featured = SingleFilter("Name", "Apple");
                       const {name,id, rating, price, off, stock, lavel, image,sold }= items;
                       return(
                         <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
-                          <ProductCard Name={name} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
+                          <ProductCard Name={name} addCart={AddToCartHandler(id)} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
                         </div>
                       )
                     })
@@ -229,10 +213,6 @@ const Featured = SingleFilter("Name", "Apple");
               </section>
           </div>
         </div>
-        <button onClick={()=>dispach({
-          type:"CHANGE_NAME",
-          payload:data
-  })}>Check dispatch</button>
         </div>
         </Tabs>
     </main>

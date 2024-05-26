@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa6";
 import { IoEye } from "react-icons/io5";
 import { FaShareAlt } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
-import { DiscountFunc } from '../../Functions/Functions';
+import { AddToCartHandler, DiscountFunc } from '../../Functions/Functions';
 
 
 
@@ -26,6 +26,7 @@ if(1 < parseInt(stock)){
 }else{
   stocks = false
 }
+
 
 
 
@@ -73,13 +74,12 @@ if(1 < parseInt(stock)){
             }
             Tk</p>
           </span>
-
-        </div>
+        </div >
         {
           stock ? <div className="card-footer flex flex-col sm:flex-row justify-between uppercase gap-2">
-          <Button btnName={"Add to Cart"} classes={" bg-red-800  uppercase shadow-xl  w-[100%] text-[12px] p-0 py-2"}/>
+          <button  className={" bg-red-800  uppercase shadow-xl  w-[100%] text-[12px] p-0 py-2"} onClick={(e)=>AddToCartHandler(e.target.id)} >Add to cart</button>
 
-          <Button btnName={"Buy Now"} classes={"bg-green-700 shadow-xl uppercase w-[100%] text-[12px] p-0 py-2"} />
+          <button  className={"bg-green-700 shadow-xl uppercase w-[100%] text-[12px] p-0 py-2"} >Buy Now</button>
         </div> : <button className='w-full bg-slate-200 p-0 py-2' disabled>Stock out</button>
 
         }

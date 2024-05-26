@@ -32,7 +32,6 @@ export const SliceProduct = (a, b) => {
 
 const arry = [5, 35, 12, 635, 75];
 const result = arry.sort((a, b) => a - b);
-console.log(result)
 
 export const MinToMax = (data) => {
     const Result = data.sort((a, b) => a = b);
@@ -51,6 +50,6 @@ export const RandomProduct = (arry) => {
 }
 
 
-export const AddToCartHandler = () => {
-
+export const AddToCartHandler = (id) => {
+    console.log(id)
 }
