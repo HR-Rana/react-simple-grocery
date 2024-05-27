@@ -1,4 +1,3 @@
-import { stringify } from "postcss";
 import { AllProducts } from "../DemoData/ProductData";
 
 
@@ -34,7 +33,7 @@ const arry = [5, 35, 12, 635, 75];
 const result = arry.sort((a, b) => a - b);
 
 export const MinToMax = (data) => {
-    const Result = data.sort((a, b) => a = b);
+    const Result = data.sort((a, b) => a + b);
     return Result
 }
 
@@ -53,3 +52,5 @@ export const RandomProduct = (arry) => {
 export const AddToCartHandler = (id) => {
     console.log(id)
 }
+
+

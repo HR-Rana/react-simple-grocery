@@ -77,7 +77,7 @@ if(1 < parseInt(stock)){
         </div >
         {
           stock ? <div className="card-footer flex flex-col sm:flex-row justify-between uppercase gap-2">
-          <button  className={" bg-red-800  uppercase shadow-xl  w-[100%] text-[12px] p-0 py-2"} onClick={(e)=>AddToCartHandler(e.target.id)} >Add to cart</button>
+          <button  className={" bg-red-800  uppercase shadow-xl  w-[100%] text-[12px] p-0 py-2"} onClick={(e)=>AddToCartHandler(id)} >Add to cart</button>
 
           <button  className={"bg-green-700 shadow-xl uppercase w-[100%] text-[12px] p-0 py-2"} >Buy Now</button>
         </div> : <button className='w-full bg-slate-200 p-0 py-2' disabled>Stock out</button>

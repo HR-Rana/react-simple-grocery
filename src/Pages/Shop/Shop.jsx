@@ -184,7 +184,7 @@ const Featured = SingleFilter("Name", "Apple");
                       const {name,id, rating, price, off, stock, lavel, image,sold }= items;
                       return(
                         <div className='w-[90%] mx-auto my-3 h-[100%] ' key={index}>
-                          <ProductCard Name={name} addCart={AddToCartHandler(id)} Price={price} img={image} sold={sold} id={id} rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
+                          <ProductCard Name={name} addCart={AddToCartHandler(id)} Price={price} img={image} sold={sold} id={id}  rating={rating} stock={stock} lavel={lavel} off={off} classes={"rounded-lg border-[.5px] shadow-lg p-3"} />
                         </div>
                       )
                     })

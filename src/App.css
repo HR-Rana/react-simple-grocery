@@ -128,7 +128,12 @@ button{
 
 
 /* checkout page */
-.checkout-page{}
 .checkout-page form input{
   @apply border-[.5px] border-gray-300 w-full px-3 py-2 outline-none
+}
+.checkout-page .checkout-view{
+  @apply shadow py-5 px-7 w-[95%] mx-auto rounded-lg
+}
+.checkout-page .checkout-view li{
+  @apply list-disc leading-8
 }
