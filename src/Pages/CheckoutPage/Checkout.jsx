@@ -7,7 +7,7 @@ export default function Checkout() {
     <div className='checkout-page py-5'>
         <div className='w-[100%]  md:w-[80%] mx-auto'>
             <div className="block md:flex   gap-5 justify-between">
-                <div className='Order-info mb-5 md:mb-0 bg-gray-100 p-5 md:p-0 w-[100%] md:w-[55%]'>
+                <div className='Order-info mb-5 md:mb-0 bg-gray-100 p-5 md:p-5 w-[100%] md:w-[55%]'>
                      <h4>Delivery Informaiton</h4>
                     <span className='p-3'>
                         <div>
