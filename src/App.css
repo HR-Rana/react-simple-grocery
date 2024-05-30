@@ -8,116 +8,135 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  h1, h2, h3{
+@layer base {
+
+  h1,
+  h2,
+  h3 {
     font-family: "Merriweather", serif;
   }
-  h4, h5, h6{
+
+  h4,
+  h5,
+  h6 {
     font-family: "Roboto Slab", serif;
   }
-  body{
+
+  body {
     font-family: "Roboto", sans-serif;
   }
 }
 
 
 
-h1{
+h1 {
   @apply text-[42px] font-[900]
 }
 
-h2{
+h2 {
   @apply text-[38px] font-[700]
 }
 
-h3{
+h3 {
   @apply text-[32px] font-[600]
 }
-h4{
+
+h4 {
   @apply text-[28px] font-semibold
 }
-h5{
+
+h5 {
   @apply text-[24px] font-semibold
 }
-h6{
+
+h6 {
   @apply text-[20px] font-semibold
 }
 
 
-nav ul li svg{
+nav ul li svg {
   @apply text-[20px]
 }
 
 
 
-section{
+section {
   @apply py-10
 }
 
-button{
-  @apply p-2 bg-[green] text-white font-[700] capitalize rounded-lg px-5 
+button {
+  @apply p-2 bg-[green] text-white font-[700] capitalize rounded-lg px-5
 }
 
 
-.banner-img{
-  @apply  p-5 flex items-center justify-center
+.banner-img {
+  @apply p-5 flex items-center justify-center
 }
-.banner-img img{
+
+.banner-img img {
   @apply w-[80%] h-[70%]
 }
 
-.slick-slider  .slick-next, .slick-slider .slick-prev{
+.slick-slider .slick-next, .slick-slider .slick-prev {
   @apply !hidden absolute left-0 top-full
 }
-.slick-track{
+
+.slick-track {
   @apply w-screen
 }
 
 
 
 
-.favorit-view span{
-  @apply rounded-full bg-slate-300 cursor-pointer hover:text-white hover:bg-red-800 ease-in-out 
+.favorit-view span {
+  @apply rounded-full bg-slate-300 cursor-pointer hover:text-white hover:bg-red-800 ease-in-out
 }
-.favorit-view span svg{
+
+.favorit-view span svg {
   @apply p-2 w-[30px] h-[30px]
 }
 
 
 
 
-.react-tabs__tab-list{
+.react-tabs__tab-list {
   @apply !border-b-0
 }
-.filter ul{
+
+.filter ul {
   @apply flex flex-col gap-3
 }
-.filter ul li{
+
+.filter ul li {
   @apply flex gap-[7px] items-center text-[18px]
 }
-.filter ul li svg{
-  @apply text-orange-400 cursor-pointer text-[24px] 
+
+.filter ul li svg {
+  @apply text-orange-400 cursor-pointer text-[24px]
 }
 
-.filter{
-  @apply shadow-lg w-[90%] flex flex-col mx-auto p-5 rounded-lg gap-2  my-5 bg-gray-50
+.filter {
+  @apply shadow-lg w-[90%] flex flex-col mx-auto p-5 rounded-lg gap-2 my-5 bg-gray-50
 }
 
-.pagination li{
+.pagination li {
   @apply p-2 w-[40px] text-[18px] font-semibold border border-black cursor-pointer flex items-center justify-center h-[35px] rounded-md
 }
-.pagination button{
+
+.pagination button {
   @apply bg-gray-500
 }
-.pagination .active{
+
+.pagination .active {
   @apply bg-gray-400 text-black
 }
 
 
-.quantity input[type=button]{
+.quantity input[type=button] {
   @apply rounded-md bg-gray-100 cursor-pointer py-2 flex justify-center text-[20px]
 }
-.quantity input{
+
+.quantity input {
   @apply w-[100px] flex text-center
 }
 
@@ -128,12 +147,30 @@ button{
 
 
 /* checkout page */
-.checkout-page form input{
+.checkout-page form input {
   @apply border-[.5px] border-gray-300 w-full px-3 py-2 outline-none
 }
-.checkout-page .checkout-view{
+
+.checkout-page .checkout-view {
   @apply shadow py-5 px-7 w-[95%] mx-auto rounded-lg
 }
-.checkout-page .checkout-view li{
+
+.checkout-page .checkout-view li {
   @apply list-disc leading-8
+}
+
+.checkout-page .invoice ul {
+  @apply my-7
+}
+
+.checkout-page .invoice ul li {
+  @apply flex items-center justify-between leading-10
+}
+
+.checkout-page .invoice ul li span:nth-child(2) {
+  @apply font-semibold
+}
+
+.checkout-page li {
+  @apply list-none
 }
