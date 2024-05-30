@@ -40,6 +40,15 @@ const data = AllProducts.find((item)=>{
         }
     }
 
+    // 
+
+  const customQuantity =(e)=>{
+    const value = parseInt(e.target.value)
+    dispatch({
+      type:"CUSTOM_QUANTITY",
+      payload:value
+    })
+  }
     
   return (
     <main className='py-10'>
@@ -74,7 +83,7 @@ const data = AllProducts.find((item)=>{
                     <h5>Product Quantity:</h5>
                     <form action="" className='flex gap-3 mt-5'>
                      <input type="button" value="-" className='discreament' onClick={()=> DicreaseQuantity()} />
-                      <input type="number" name="" id=""  value={state.PQuantity} onChange={(e)=>{setQuantity(parseInt(e.target.value))}} className='border-[1px] w-[60px] outline-none font-semibold'/>
+                      <input type="number" name="" id=""  value={state.PQuantity} onChange={(e)=>{customQuantity(e)}} className='border-[1px] w-[60px] outline-none font-semibold'/>
                      <input type="button" value="+" className='increament' onClick={()=> dispatch({type:"QUANTITY_INCREASE"})} />
                     </form>
                   <div className="buttons my-6 flex flex-col gap-3 w-1/2">

@@ -45,7 +45,11 @@ export let UserInteractiveReducer = (state, action) => {
                 ...state,
                 PQuantity: state.PQuantity + 1
             }
-
+        case "CUSTOM_QUANTITY":
+            return {
+                ...state,
+                PQuantity: action.payload
+            }
         case "Quantity_DICREASE":
             return {
                 ...state,
