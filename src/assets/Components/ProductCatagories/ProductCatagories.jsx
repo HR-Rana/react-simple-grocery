@@ -13,7 +13,6 @@ export default function ProductCatagories({parentClass, ItemCatagory }) {
         return items.catagory === ItemCatagory;
     })
 
-    console.log(NewValue)
   
     // slider settings
     var settings = {

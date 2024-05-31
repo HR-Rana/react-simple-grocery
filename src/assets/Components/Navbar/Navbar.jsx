@@ -5,12 +5,15 @@ import { FaShoppingBasket } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
+import { useReducer } from 'react';
+import { ProductReducer, initialState } from '../../Reducer/ProductReducer';
 
 
 export default function Navbar() {
+    const [state, dispatch] = useReducer(ProductReducer, initialState)
+
   return (
-    <div>
-        
+    <div className='navbar'>
         <div className="navigation-bar bg-gray-200 p-5 flex items-center sticky top-0 px-5 justify-between gap-5 w-full">
             <div className="logo">
                 <NavLink to={"/"} >
@@ -41,7 +44,12 @@ export default function Navbar() {
                             </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Profile"} ><FaCircleUser /></NavLink>
+                        <NavLink to={"/Profile"} onClick={()=>{
+                            dispatch({
+                                type:"HIDE_NAVBAR",
+                                payload:true,
+                            }), handle
+                        }}><FaCircleUser /></NavLink>
                     </li>
                 </ul>
             </nav>

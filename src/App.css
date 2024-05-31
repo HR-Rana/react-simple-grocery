@@ -174,3 +174,13 @@ button {
 .checkout-page li {
   @apply list-none
 }
+
+
+
+
+
+
+/* user dashboard */
+.user-dashboard .left-sidebar li, .user-dashboard .left-sidebar a {
+  @apply flex items-center gap-3
+}

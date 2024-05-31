@@ -3,7 +3,6 @@ import Button from '../../../assets/Components/Button/Button'
 import { Link } from 'react-router-dom'
 
 export default function CatagoriesCard({img, offer, name,imgClass,bodyclass, link}) {
-  console.log(link)
   return (
     <div className='shop-by-catagories w-full p-3 shadow-inner'>
         <div className='catagories'>

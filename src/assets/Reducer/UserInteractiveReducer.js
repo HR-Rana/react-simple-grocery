@@ -15,6 +15,7 @@ export let InteractiveInit = {
         ZipCode: " ",
         RoadInfo: " "
     },
+    Nav: false,
 }
 
 
@@ -64,6 +65,13 @@ export let UserInteractiveReducer = (state, action) => {
             return {
                 ...state,
                 RecentlyViewd: action.payload
+            }
+
+        case "HIDE_NAVBAR":
+            console.log(action.payload)
+            return {
+                ...state,
+                Nav: action.payload
             }
         default:
             return state

@@ -73,7 +73,11 @@ const data = AllProducts.find((item)=>{
                   }
                 </span>
                 <span>
-                   <p>{data.description}</p>
+                   <p><span className='font-semibold'>Catagory:</span> {data.catagory}</p>
+                </span>
+                <span>
+                 
+                   <p><span className='font-semibold'>In Stock:</span> {data.stock} {data.weight}</p>
                 </span>
                 <br />
                 <hr />
